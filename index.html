@@ -24,7 +24,7 @@
         header { border-bottom: 1px solid var(--border); padding: 20px 0; background: var(--white); position: sticky; top: 0; z-index: 100; }
         .header-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         .logo { font-size: 22px; font-weight: 700; text-decoration: none; color: var(--navy); }
-        .contact-info { font-size: 14px; color: var(--charcoal); }
+        .contact-info { font-size: 14px; color: var(--charcoal); font-weight: 500; }
 
         /* Hero Row */
         .hero-section { padding: 80px 0; background: var(--white); }
@@ -36,11 +36,12 @@
 
         /* Services Row */
         .services-section { padding: 80px 0; background-color: var(--bg-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .services-section h2 { text-align: center; margin-bottom: 50px; font-size: 32px; }
         .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
         @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
-        .service-column h2 { font-size: 26px; margin-bottom: 30px; border-bottom: 2px solid var(--navy); padding-bottom: 10px; }
+        .service-column h3.col-title { font-size: 24px; margin-bottom: 30px; border-bottom: 2px solid var(--navy); padding-bottom: 10px; }
         .service-item { margin-bottom: 25px; }
-        .service-item h3 { font-size: 18px; margin-bottom: 8px; }
+        .service-item h4 { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
         .service-item p { font-size: 14px; color: var(--charcoal); }
 
         /* Intake Form Row */
@@ -49,26 +50,27 @@
         .form-header { text-align: center; margin-bottom: 30px; }
         .form-header h2 { font-size: 28px; margin-bottom: 10px; }
         .form-header p { font-size: 14px; margin-bottom: 15px; }
-        .secure-badge { font-size: 12px; font-style: italic; background: #E9ECEF; padding: 10px; border-radius: 4px; display: inline-block; width: 100%; text-align: center; }
+        .secure-badge { font-size: 12px; font-style: italic; background: #E9ECEF; padding: 10px; border-radius: 4px; display: inline-block; width: 100%; text-align: center; margin-top: 10px; color: var(--charcoal); line-height: 1.5; }
         
         .form-group { margin-bottom: 20px; text-align: left; }
         .form-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; }
-        .form-control { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; font-size: 14px; }
+        .form-control { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; font-size: 14px; color: var(--charcoal); background-color: var(--white); }
         .form-control:focus { outline: none; border-color: var(--navy); }
         
-        .checkbox-group { margin-top: 10px; }
-        .checkbox-label { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; margin-bottom: 12px; cursor: pointer; text-align: left; }
-        .checkbox-label input { margin-top: 4px; }
+        .checkbox-group-container { text-align: left; margin-bottom: 25px; margin-top: 25px; }
+        .checkbox-group-container label.group-label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 8px; color: var(--navy); }
+        .checkbox-label { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; margin-bottom: 12px; cursor: pointer; text-align: left; color: var(--charcoal); line-height: 1.4; }
+        .checkbox-label input { margin-top: 4px; flex-shrink: 0; }
         
-        .submit-btn { width: 100%; padding: 15px; background-color: var(--navy); color: var(--white); border: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s; margin-top: 20px; }
+        .submit-btn { width: 100%; padding: 15px; background-color: var(--navy); color: var(--white); border: none; border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s; margin-top: 25px; }
         .submit-btn:hover { background-color: #2C3E50; }
 
         /* Footer Row */
-        footer { background-color: var(--navy); color: #CBD5E1; padding: 60px 0 30px 0; font-size: 13px; text-align: left; }
-        footer h3 { color: var(--white); font-size: 16px; margin-bottom: 15px; }
-        footer p { margin-bottom: 20px; color: #94A3B8; }
+        footer { background-color: var(--navy); color: #CBD5E1; padding: 60px 0 30px 0; font-size: 13px; text-align: left; border-top: 1px solid var(--border); }
+        footer h3 { color: var(--white); font-size: 16px; margin-bottom: 15px; font-family: 'Inter', sans-serif; font-weight: 600; }
+        footer p { margin-bottom: 20px; color: #94A3B8; line-height: 1.6; }
         .footer-divider { border-top: 1px solid #334155; margin: 30px 0; }
-        .licenses-grid { color: #94A3B8; line-height: 1.8; }
+        .licenses-grid { color: #64748B; line-height: 1.8; font-size: 12px; }
     </style>
 </head>
 <body>
@@ -86,7 +88,7 @@
         <div class="container hero-grid">
             <div class="hero-text">
                 <h1>Christopher Chau</h1>
-                <h3 style="font-style: italic; font-weight: normal; margin-bottom: 20px; color: var(--charcoal);">Private Insurance Consultant & Asset Protection Strategist</h3>
+                <h3 style="font-style: italic; font-weight: normal; margin-bottom: 20px; color: var(--charcoal); font-size: 20px;">Private Insurance Consultant & Asset Protection Strategist</h3>
                 <p>Specializing in Advanced Wealth Structures & Portfolio Analytics Across 30 States. Providing a modern, consultative approach designed to maximize capital performance, insulate core debts, and engineer tax-advantaged cash value frameworks.</p>
             </div>
             <div>
@@ -97,54 +99,41 @@
 
     <!-- Row 2: Consultative Services Menu -->
     <section class="services-section">
-        <div class="container services-grid">
-            
-            <div class="service-column">
-                <h2>Institutional Asset & Capital Structure</h2>
-                <div class="service-item">
-                    <h3>Strategic Income Replacement & Capital Security</h3>
-                    <p>High-limit term frameworks engineered to insulate family lifestyles and safeguard complex multi-state debt or business obligations.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Permanent Wealth Allocation Models</h3>
-                    <p>Guaranteed, permanent whole life structures optimized for steady, tax-deferred cash capitalization and seamless generational wealth transfer.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Private Mortgage Equity Safeguards</h3>
-                    <p>Dedicated asset protection structures designed to pay off outstanding residential debt, insulating your family's primary real estate asset.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Advanced Indexed Universal Life (IUL) Capital Architecture</h3>
-                    <p>Custom-allocated financial architectures structured exclusively around your accumulation goals: including high-efficiency Simplified Solves, Max Legacy Leverage, and Maximum Funded Cash Capitalization models configured to minimize transactional friction and optimize compounding cash flow.</p>
-                </div>
-            </div>
-
-            <div class="service-column">
-                <h2>Strategic Portfolio Review & Analytics</h2>
-                <div class="service-item">
-                    <h3>Comprehensive Portfolio Audits</h3>
-                    <p>An objective, clinical diagnostic of your current insurance holdings to extract hidden structural defects, expiring term dates, or restrictive accidental-only clauses.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Premium & Coverage Optimization Diagnostics</h3>
-                    <p>Leveraging modern algorithmic underwriting shifts to ensure your current cash outlays maximize your structural leverage—verifying if we can secure higher coverage limits or lower premium rate structures for the exact same capital you are currently spending.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Term-to-Permanent Conversion Optimization</h3>
-                    <p>Identifying hidden conversion rights within your existing, outside term holdings to seamlessly transition them into compounding permanent cash assets—utilizing modern digital processing for <strong>instant decisions</strong> on the spot. *(Note: Capital allocations exceeding $2,000,000 utilize traditional institutional underwriting.)</p>
-                </div>
-                <div class="service-item">
-                    <h3>Portfolio Dashboard Consolidation & Equity Extraction</h3>
-                    <p>Streamlining fragmented, legacy coverages into a singular, highly efficient dashboard. For permanent or mature policies, we perform an equity diagnostic to identify accrued cash surrender value, seamlessly leveraging those existing funds via tax-free distributions to deploy larger coverage thresholds without increasing out-of-pocket costs.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Row 3: Secure Client Intake Portal -->
-    <section class="intake-section">
         <div class="container">
-            <div class="form-container">
-                <div class="form-header">
-                    <h2>Consultant Session Intake Form</h2>
+            <h2>Strategic Portfolio Services</h2>
+            <div class="services-grid">
+                
+                <div class="service-column">
+                    <h3 class="col-title">Institutional Asset & Capital Structure</h3>
+                    <div class="service-item">
+                        <h4>Strategic Income Replacement & Capital Security</h4>
+                        <p>High-limit term frameworks engineered to insulate family lifestyles and safeguard complex multi-state debt or business obligations.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Permanent Wealth Allocation Models</h4>
+                        <p>Guaranteed, permanent whole life structures optimized for steady, tax-deferred cash capitalization and seamless generational wealth transfer.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Private Mortgage Equity Safeguards</h4>
+                        <p>Dedicated asset protection structures designed to pay off outstanding residential debt, insulating your family's primary real estate asset.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Advanced Indexed Universal Life (IUL) Capital Architecture</h4>
+                        <p>Custom-allocated financial architectures structured exclusively around your accumulation goals: including high-efficiency Simplified Solves, Max Legacy Leverage, and Maximum Funded Cash Capitalization models configured to minimize transactional friction and optimize compounding cash flow.</p>
+                    </div>
+                </div>
+
+                <div class="service-column">
+                    <h3 class="col-title">Strategic Portfolio Review & Analytics</h3>
+                    <div class="service-item">
+                        <h4>Comprehensive Portfolio Audits</h4>
+                        <p>An objective, clinical diagnostic of your current insurance holdings to extract hidden structural defects, expiring term dates, or restrictive accidental-only clauses.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Premium & Coverage Optimization Diagnostics</h4>
+                        <p>Leveraging modern algorithmic underwriting shifts to ensure your current cash outlays maximize your structural leverage—verifying if we can secure higher coverage limits or lower premium rate structures for the exact same capital you are currently spending.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Term-to-Permanent Conversion Optimization</h4>
+                        <p>Identifying hidden conversion rights within your existing, outside term holdings to seamlessly transition them into compounding permanent cash assets—utilizing modern digital processing for <strong>instant decisions</strong> on the spot. *(Note: Capital allocations exceeding $2,000,000 utilize traditional institutional underwriting.)</p>
+                    </div>
