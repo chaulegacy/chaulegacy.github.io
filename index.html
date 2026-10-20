@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christopher Chau | Licensed Life Insurance Agent & Consultant</title>
+<meta name="description" content="Licensed life insurance agent and consultant serving families in 30 states. Term, whole life, mortgage protection, IUL, and honest policy reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14213D; --navy-2:#1F2F52; --gold:#B08D57; --gold-soft:#F3EBDD;
+  --ink:#2B3440; --muted:#5F6B7A; --line:#E6E8EC; --bg:#FAF9F6; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--navy);line-height:1.2}
+a{color:var(--navy)}
+.container{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:76px 0}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+.section-title{font-size:34px;margin-bottom:14px}
+.section-sub{color:var(--muted);max-width:640px;margin-bottom:42px}
+.center{text-align:center}.center .section-sub{margin-left:auto;margin-right:auto}
+.alt{background:var(--bg)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;flex-wrap:wrap;gap:8px 16px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;color:var(--navy);text-decoration:none}
+.links{display:flex;gap:24px;align-items:center}
+.nav a.link{color:var(--ink);text-decoration:none;font-size:14px;font-weight:500;padding-bottom:3px;border-bottom:2px solid transparent}
+.nav a.link:hover{color:var(--gold)}
+.nav a.link.active{border-bottom-color:var(--gold);color:var(--navy)}
+@media(max-width:820px){
+  .nav{justify-content:space-between}
+  .links{order:3;width:100%;justify-content:space-between;gap:10px;padding-top:6px;border-top:1px solid var(--line)}
+  .nav a.link{font-size:13px}
+}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:13px 26px;border-radius:6px;font-weight:600;font-size:15px;border:none;cursor:pointer;transition:.2s;font-family:inherit}
+.btn:hover{background:var(--navy-2);transform:translateY(-1px)}
+.btn.small{padding:10px 20px;font-size:14px}
+.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy);margin-left:10px}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+@media(max-width:480px){.btn.ghost{margin-left:0;margin-top:10px}}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--bg),#fff);padding:76px 0 66px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:44px;margin-bottom:18px}
+.hero p.lead{font-size:18px;color:var(--muted);margin-bottom:30px;max-width:540px}
+.trust{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;font-size:13px;color:var(--muted)}
+.trust b{display:block;font-family:'Playfair Display',serif;font-size:26px;color:var(--navy)}
+.photo-wrap{position:relative;max-width:380px;margin:0 auto}
+.photo-wrap::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--gold);border-radius:10px;z-index:0}
+.photo-wrap img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;background:var(--gold-soft);box-shadow:0 18px 40px rgba(20,33,61,.15)}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero p.lead{margin-left:auto;margin-right:auto}.trust{justify-content:center}.hero h1{font-size:34px}.photo-wrap{order:-1;max-width:270px}}
+
+/* Inner page header */
+.page-head{background:linear-gradient(180deg,var(--bg),#fff);padding:60px 0 44px;text-align:center;border-bottom:1px solid var(--line)}
+.page-head h1{font-size:38px;margin-bottom:10px}
+.page-head p{color:var(--muted);max-width:620px;margin:0 auto}
+@media(max-width:600px){.page-head h1{font-size:30px}}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;transition:.2s}
+.card:hover{box-shadow:0 12px 28px rgba(20,33,61,.08);transform:translateY(-3px)}
+.icon{width:42px;height:42px;border-radius:50%;background:var(--gold-soft);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:16px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{font-size:14.5px;color:var(--muted)}
+.card a.more{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1.5px solid var(--gold)}
+
+/* Two column / checks */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.checks{list-style:none}
+.checks li{padding:14px 0 14px 36px;border-bottom:1px solid var(--line);position:relative;font-size:15px}
+.checks li::before{content:"✓";position:absolute;left:0;top:14px;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.checks li b{color:var(--navy)}
+.note{font-size:12.5px;color:var(--muted);margin-top:18px}
+@media(max-width:820px){.two{grid-template-columns:1fr;gap:30px}}
+
+/* About */
+.about p{margin-bottom:16px;font-size:16px}
+.pledge{background:var(--gold-soft);border-left:4px solid var(--gold);padding:20px 24px;border-radius:0 8px 8px 0}
+.pledge h3{font-size:20px;margin-bottom:10px}
+.pledge ul{list-style:none}
+.pledge li{padding:6px 0 6px 22px;position:relative;font-size:14.5px}
+.pledge li::before{content:"•";position:absolute;left:4px;color:var(--gold);font-weight:700}
+.about-photo{max-width:300px;margin:0 0 28px}
+.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;background:var(--gold-soft);box-shadow:0 12px 30px rgba(20,33,61,.12)}
+@media(max-width:820px){.about-photo{margin:0 auto 24px}}
+
+/* Process */
+.process{background:var(--navy)}
+.process .section-title{color:#fff}.process .section-sub{color:#B8C2D3}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+.step .num{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold)}
+.step h3{color:#fff;font-size:19px;margin:4px 0 8px}
+.step p{font-size:14.5px;color:#B8C2D3}
+
+/* CTA strip */
+.cta{background:var(--gold-soft);padding:54px 0;text-align:center}
+.cta h2{font-size:28px;margin-bottom:10px}
+.cta p{color:var(--muted);margin-bottom:22px}
+
+/* FAQ */
+.faq{max-width:780px;margin:0 auto;text-align:left}
+.faq h3.group{font-size:22px;margin:38px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+.faq h3.group:first-child{margin-top:0}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;font-weight:600;color:var(--navy);padding:16px 30px 16px 0;position:relative;list-style:none;font-size:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:24px;color:var(--gold);font-weight:400}
+details[open] summary::after{content:"–"}
+details p,details ul{padding:0 0 16px;color:var(--muted);font-size:15px}
+details ul{margin-left:20px}
+details li{margin-bottom:6px}
+
+/* Form */
+.form-card{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:44px;box-shadow:0 16px 40px rgba(20,33,61,.07);text-align:left}
+fieldset{border:none;margin-bottom:28px}
+legend{font-family:'Playfair Display',serif;font-size:19px;color:var(--navy);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:620px){.row{grid-template-columns:1fr}.form-card{padding:28px 20px}}
+.field{margin-bottom:16px}
+label.l{display:block;font-size:13.5px;font-weight:500;margin-bottom:6px}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{width:100%;padding:12px 14px;border:1px solid #D5D9E0;border-radius:6px;font:inherit;font-size:15px;color:var(--ink);background:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(20,33,61,.1)}
+textarea{min-height:100px;resize:vertical}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:620px){.options{grid-template-columns:1fr}}
+.opt{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #D5D9E0;border-radius:6px;font-size:14.5px;cursor:pointer}
+.opt:hover{border-color:var(--navy)}
+.opt input{accent-color:var(--navy);width:17px;height:17px;flex-shrink:0}
+.consent{display:flex;gap:10px;font-size:12.5px;color:var(--muted);align-items:flex-start;margin:6px 0 22px}
+.consent input{margin-top:4px;accent-color:var(--navy)}
+.secure{background:var(--gold-soft);border-radius:6px;padding:12px 14px;font-size:13px;color:#6B5733;margin-bottom:26px}
+.form-card .btn{width:100%;font-size:16px;padding:15px}
+#status{margin-top:16px;text-align:center;font-size:14px}
+.hours{max-width:720px;margin:28px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:14px;color:var(--muted);text-align:left}
+.hours div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.hours b{color:var(--navy);display:block;margin-bottom:4px}
+@media(max-width:620px){.hours{grid-template-columns:1fr}}
+
+/* Privacy page */
+.doc{max-width:780px;margin:0 auto;padding:50px 22px 70px}
+.doc h1{font-size:36px;margin-bottom:6px}
+.doc .date{color:var(--muted);font-size:14px;margin-bottom:30px}
+.doc h2{font-size:22px;margin:32px 0 10px}
+.doc p,.doc li{font-size:15.5px;margin-bottom:12px}
+.doc ul{margin-left:22px}
+
+/* Footer */
+footer{background:#0E1730;color:#9AA6BC;padding:56px 0 30px;font-size:13px}
+footer h3{color:#fff;font-size:17px;margin-bottom:10px;font-family:'Inter',sans-serif;font-weight:600}
+.foot-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:40px}
+@media(max-width:720px){.foot-grid{grid-template-columns:1fr}}
+footer a{color:#fff;text-decoration:none}
+.states{line-height:1.9;font-size:11.5px}
+.legal{border-top:1px solid #26324F;margin-top:32px;padding-top:22px;font-size:11.5px;line-height:1.7;color:#7C889F}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="brand">Christopher Chau</a>
+    <div class="links">
+      <a class="link active" href="index.html">Home</a>
+      <a class="link" href="services.html">Services</a>
+      <a class="link" href="about.html">About</a>
+      <a class="link" href="faq.html">FAQ</a>
+      <a class="link" href="contact.html">Contact</a>
+    </div>
+    <a class="btn small" href="contact.html">Free Consultation</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Licensed Life Insurance Agent &amp; Consultant</div>
+      <h1>Protection in place before your family needs it.</h1>
+      <p class="lead">I make life insurance simple. I explain your options in plain English, shop across many carriers, and make sure you only buy coverage that fits your life and your budget.</p>
+      <a class="btn" href="contact.html">Request a Free Consultation</a>
+      <a class="btn ghost" href="services.html#review">Review My Existing Policy</a>
+      <div class="trust">
+        <div><b>400+</b>Families served</div>
+        <div><b>30</b>States licensed</div>
+        <div><b>18</b>Carriers to compare</div>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <img src="headshot.jpg" alt="Christopher Chau, licensed life insurance agent and consultant" onerror="this.onerror=null;this.src='Christopher%20chau2058.jpg';">
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container center">
+    <div class="eyebrow">Coverage Options</div>
+    <h2 class="section-title">Coverage built around your goals</h2>
+    <p class="section-sub">Whether you want to protect your income, your home, or your family's future, I'll help you understand each option before you decide.</p>
+    <div class="cards" style="text-align:left">
+      <div class="card"><div class="icon">♦</div><h3>Term Life</h3><p>Affordable coverage for a set number of years to replace income while your family depends on it most.</p></div>
+      <div class="card"><div class="icon">⌂</div><h3>Mortgage Protection</h3><p>Life insurance designed so your loved ones can use the benefit toward your mortgage and keep the home.</p></div>
+      <div class="card"><div class="icon">❖</div><h3>Whole Life &amp; Final Expense</h3><p>Lifelong coverage with fixed premiums, including final expense and plans for children.</p></div>
+      <div class="card"><div class="icon">↗</div><h3>Cash Accumulation (IUL)</h3><p>Flexible permanent coverage with cash value linked to an index.</p></div>
+    </div>
+    <p style="margin-top:34px"><a class="btn ghost" style="margin-left:0" href="services.html">See all services</a></p>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container center">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="section-title">Three simple steps</h2>
+    <p class="section-sub">No jargon and no obligation.</p>
+    <div class="steps" style="text-align:left">
+      <div class="step"><div class="num">01</div><h3>Tell me about you</h3><p>Fill out the short form. It takes about two minutes.</p></div>
+      <div class="step"><div class="num">02</div><h3>We talk it through</h3><p>I'll call at the time you choose to learn your goals and look at any policies you already have.</p></div>
+      <div class="step"><div class="num">03</div><h3>You decide</h3><p>I'll show you clear options from multiple carriers. You choose what's right, on your own timeline.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container center">
+    <div class="eyebrow">About Me</div>
+    <h2 class="section-title">I'm here to be in your corner</h2>
+    <p style="max-width:640px;margin:0 auto 24px;font-size:16px">I got into life insurance because I'm tired of seeing families turn to crowdfunding after a loss. My goal is to take a complicated situation and make it simple, with no pressure and no pushy sales tactics.</p>
+    <a class="btn ghost" style="margin-left:0" href="about.html">Read my story</a>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to talk it through?</h2>
+    <p>A free, no-pressure conversation about what makes sense for you.</p>
+    <a class="btn" href="contact.html">Request a Free Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h3>Christopher Chau</h3>
+        <p>Licensed Life Insurance Agent &amp; Consultant<br>
+        Boston, MA &amp; Miami, FL<br>
+        <a href="tel:6179593437">617-959-3437</a><br>
+        <a href="mailto:cchau.insurance@gmail.com">cchau.insurance@gmail.com</a><br><br>
+        <a href="privacy.html" style="text-decoration:underline">Privacy Policy</a></p>
+      </div>
+      <div>
+        <h3>Active Licensing (Life Insurance) / NPN</h3>
+        <div class="states">Alabama (30031696910) · Arizona (21221078) · California (4394543) · Colorado (849833) · Florida (G132455) · Georgia (3724856) · Idaho (21221078) · Indiana (4023131) · Iowa (21221078) · Kansas (21221078) · Kentucky (DOI-1348578) · Louisiana (1171569) · Maine (PRN488304) · Maryland (71513527) · Massachusetts (21221078) · Michigan (21221078) · Mississippi (11048317) · Missouri (3003169698) · Nevada (4022367) · New Mexico (21221078) · North Carolina (21221078) · Ohio (1592406) · Oklahoma (3003169678) · Oregon (21221078) · South Carolina (21221078) · Tennessee (3003169651) · Texas (3197663) · Virginia (1450614) · Washington (1263988) · West Virginia (21221078)</div>
+      </div>
+    </div>
+    <div class="legal">
+      Christopher Chau is a licensed life insurance agent. He may only discuss or sell products in states where he is licensed. This website is not affiliated with any government agency, Medicare, or Social Security. Product availability, features, and pricing vary by state, carrier, and individual underwriting. Cash value policies, including IUL, involve fees and charges and are not an investment; projected values are not guaranteed. Replacing an existing policy may have costs or disadvantages. Never cancel a policy until a replacement is approved and in force. Information on this site is general education and is not tax, legal, or investment advice. Any savings or added coverage from a policy review are not guaranteed.
+      <br><br>© <span id="yr"></span> Christopher Chau. All rights reserved.
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
