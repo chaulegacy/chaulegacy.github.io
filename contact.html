@@ -133,17 +133,31 @@ footer a:hover{color:var(--gold)}
       
       <!-- TCPA COMPLIANCE AUDIT FIELD -->
       <input type="hidden" id="tcpa_timestamp" name="TCPA Written Consent Timestamp" value="">
+<fieldset>
+  <legend>1. About you</legend>
+  
+  <!-- Row 1: Full Name spans the entire width -->
+  <div class="row">
+    <div class="field" style="width: 100%;">
+      <label class="l" for="fn">Full name *</label>
+      <input type="text" id="fn" name="Full Name" required autocomplete="name" style="width: 100%; box-sizing: border-box;">
+    </div>
+  </div>
+  
+  <!-- Row 2: Phone and Email sit side-by-side underneath -->
+  <div class="row" style="display: flex; gap: 15px;">
+    <div class="field" style="flex: 1;">
+      <label class="l" for="ph">Phone *</label>
+      <input type="tel" id="ph" name="Phone" required autocomplete="tel" style="width: 100%; box-sizing: border-box;">
+    </div>
+    <div class="field" style="flex: 1;">
+      <label class="l" for="em">Email *</label>
+      <input type="email" id="em" name="Email" required autocomplete="email" style="width: 100%; box-sizing: border-box;">
+    </div>
+  </div>
 
-      <fieldset>
-        <legend>1. About you</legend>
-        <div class="row">
-          <div class="field"><label class="l" for="fn">Full name *</label><input type="text" id="fn" name="Full Name" required autocomplete="name"></div>
-        </div>
-        <div class="row">
-          <div class="field"><label class="l" for="ph">Phone *</label><input type="tel" id="ph" name="Phone" required autocomplete="tel"></div>
-          <div class="field"><label class="l" for="em">Email *</label><input type="email" id="em" name="Email" required autocomplete="email"></div>
+</fieldset>
 
-      </fieldset>
 
       <fieldset>
         <legend>2. How can I best help?</legend>
