@@ -120,29 +120,31 @@ footer a:hover{color:var(--gold)}
     <p>A few quick details, and I'll reach out personally at the time you choose.</p>
   </div>
 </div>
+  <div>
 <fieldset>
   <legend>1. About you</legend>
-  <div class="row">
-    <div class="field">
+  <div class="row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 0;">
+    <div class="field" style="margin-bottom: 16px;">
       <label class="l" for="first_name">First name *</label>
-      <input type="text" id="first_name" name="First Name" required autocomplete="given-name">
+      <input type="text" id="first_name" name="First Name" required autocomplete="given-name" style="width: 100%;">
     </div>
-    <div class="field">
+    <div class="field" style="margin-bottom: 16px;">
       <label class="l" for="last_name">Last name *</label>
-      <input type="text" id="last_name" name="Last Name" required autocomplete="family-name">
+      <input type="text" id="last_name" name="Last Name" required autocomplete="family-name" style="width: 100%;">
     </div>
   </div>
-  <div class="row">
-    <div class="field">
+  <div class="row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 0;">
+    <div class="field" style="margin-bottom: 16px;">
       <label class="l" for="tel">Phone *</label>
-      <input type="tel" id="tel" name="Phone" required autocomplete="tel">
+      <input type="tel" id="tel" name="Phone" required autocomplete="tel" style="width: 100%;">
     </div>
-    <div class="field">
+    <div class="field" style="margin-bottom: 16px;">
       <label class="l" for="email">Email *</label>
-      <input type="email" id="email" name="Email" required autocomplete="email">
+      <input type="email" id="email" name="Email" required autocomplete="email" style="width: 100%;">
     </div>
   </div>
 </fieldset>
+
 
       
       <!-- TCPA COMPLIANCE AUDIT FIELD -->
