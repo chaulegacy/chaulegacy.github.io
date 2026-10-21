@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Christopher Chau, Independent Life Insurance Broker</title>
+<title>Contact | Christopher Chau, Independent Insurance Consultant</title>
 <meta name="description" content="Request a free, no-pressure life insurance consultation or policy review.">
 <link rel="preconnect" href="https://googleapis.com">
 <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -52,6 +52,7 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backd
 @media(max-width:480px){
   .btn.ghost{margin-left:0;margin-top:10px}
   .nav .btn{padding:8px 14px;font-size:12px}
+}
 
 /* Inner Page Header */
 .page-head{background:linear-gradient(180deg,var(--bg),#fff);padding:60px 0 44px;text-align:center;border-bottom:1px solid var(--line)}
@@ -108,14 +109,14 @@ footer a:hover{color:var(--gold)}
       <a class="link" href="faq.html">FAQ</a>
       <a class="link active" href="contact.html">Contact</a>
     </div>
-    <a class="btn small" href="contact.html">Request a Quote & Policy Checkup</a>
+    <a class="btn small" href="contact.html">Request Quote & Consultation</a>
   </div>
 </header>
 
 <div class="page-head">
   <div class="container">
     <div class="eyebrow">Contact Me</div>
-    <h1>Request a Free Strategy Review</h1>
+    <h1>Request a Consultation</h1>
     <p>Provide a few brief details below, and I will reach out personally during your preferred scheduling window.</p>
   </div>
 </div>
@@ -124,6 +125,7 @@ footer a:hover{color:var(--gold)}
   <div class="container">
 
     <form class="form-card" id="intakeForm" action="https://formsubmit.co" method="POST">
+      <div class="secure">Please don't include Social Security numbers, bank information, or medical details here. We'll cover anything sensitive securely by phone.</div>
 
       <input type="hidden" name="_subject" value="New consultation request from your website">
       <input type="hidden" name="_captcha" value="false">
@@ -132,60 +134,83 @@ footer a:hover{color:var(--gold)}
       
       <!-- TCPA COMPLIANCE AUDIT FIELD -->
       <input type="hidden" id="tcpa_timestamp" name="TCPA Written Consent Timestamp" value="">
-<fieldset>
-  <legend>1. About you</legend>
-  
-  <!-- Row 1: Full Name with forced maximum width override -->
-  <div class="row" style="width: 100% !important; display: block !important; margin-bottom: 15px;">
-    <div class="field" style="width: 100% !important; display: block !important;">
-      <label class="l" for="fn">Full name *</label>
-      <input type="text" id="fn" name="Full Name" required autocomplete="name" style="width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; display: block !important;">
-    </div>
-  </div>
-  
-  <!-- Row 2: Phone and Email side-by-side underneath -->
-  <div class="row" style="display: flex !important; gap: 15px !important; width: 100% !important;">
-    <div class="field" style="flex: 1 !important;">
-      <label class="l" for="ph">Phone *</label>
-      <input type="tel" id="ph" name="Phone" required autocomplete="tel" style="width: 100% !important; box-sizing: border-box !important;">
-    </div>
-    <div class="field" style="flex: 1 !important;">
-      <label class="l" for="em">Email *</label>
-      <input type="email" id="em" name="Email" required autocomplete="email" style="width: 100% !important; box-sizing: border-box !important;">
-    </div>
-  </div>
-
-</fieldset>
-
-
-
 
       <fieldset>
-        <legend>2. How can I best help?</legend>
+        <legend>1. About you</legend>
+        <div class="row">
+          <div class="field"><label class="l" for="fn">First name *</label><input type="text" id="fn" name="First Name" required autocomplete="given-name"></div>
+          <div class="field"><label class="l" for="ln">Last name *</label><input type="text" id="ln" name="Last Name" required autocomplete="family-name"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label class="l" for="ph">Phone *</label><input type="tel" id="ph" name="Phone" required autocomplete="tel"></div>
+          <div class="field"><label class="l" for="em">Email *</label><input type="email" id="em" name="Email" required autocomplete="email"></div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label class="l" for="st">State you live in *</label>
+            <select id="st" name="State" required>
+              <option value="">Select…</option>
+              <option>Alabama</option><option>Arizona</option><option>California</option><option>Colorado</option><option>Florida</option><option>Georgia</option><option>Idaho</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Mississippi</option><option>Missouri</option><option>Nevada</option><option>New Mexico</option><option>North Carolina</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>South Carolina</option><option>Tennessee</option><option>Texas</option><option>Virginia</option><option>Washington</option><option>West Virginia</option>
+              <option>Other / not listed</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="l" for="dob">Date of birth * <span style="color:var(--muted);font-weight:400">(for accurate quotes)</span></label>
+
+            <input type="date" id="dob" name="Date of Birth" required autocomplete="bday">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. What are you looking for?</legend>
+        <div class="options">
+          <label class="opt"><input type="checkbox" name="interest" value="Mortgage protection"> Protect my home's mortgage</label>
+          <label class="opt"><input type="checkbox" name="interest" value="Family legacy / final expense"> Family legacy or final expense</label>
+          <label class="opt"><input type="checkbox" name="interest" value="IUL cash growth"> Tax-advantaged cash growth (IUL)</label>
+          <label class="opt"><input type="checkbox" name="interest" value="Children's policy"> Early-start policy for my children</label>
+          <label class="opt"><input type="checkbox" name="interest" value="Convert term to permanent"> Convert term to permanent</label>
+          <label class="opt"><input type="checkbox" name="interest" value="More coverage or lower premium"> More coverage or a lower premium</label>
+          <label class="opt"><input type="checkbox" name="interest" value="Cash value / consolidation review"> Check old policies for cash value or consolidation</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. How can I best help?</legend>
         <div class="field">
-          <label class="l" for="obj">How can I assist your family today? *</label>
+          <label class="l" for="obj">How can I best assist you today? *</label>
           <select id="obj" name="Objective" required>
             <option value="">Select an option…</option>
-            <option>I want to set up a brand new life insurance plan</option>
-            <option>I want to look over/optimize an existing policy</option>
+            <option>Set up a new life insurance policy</option>
+            <option>Review my existing policies</option>
           </select>
         </div>
         <div class="field">
-          <label class="l" for="bt">Preferred Time for a Quick Call *</label>
-          <select id="bt" name="time" required>
+          <label class="l" for="bt">Best time to talk (Eastern Time) *</label>
+          <select id="bt" name="Best Time" required>
             <option value="">Select a time…</option>
-            <option>Morning</option>
-            <option>Afternoon</option>
-            <option>Evening</option>
+            <option>Afternoon (12 PM – 5 PM)</option>
+            <option>Evening (5 PM – 9 PM)</option>
+            <option>Morning (9 AM – 12 PM)</option>
+            <option>Saturday (9 AM – 4:30 PM)</option>
           </select>
         </div>
+        <div class="field">
+          <label class="l" for="hv">Do you currently have life insurance?</label>
+          <select id="hv" name="Has Coverage"><option>Not sure</option><option>Yes, through work</option><option>Yes, a personal policy</option><option>No</option></select>
+        </div>
+        <div class="field">
+          <label class="l" for="msg">Anything you'd like me to know? (optional)</label>
+          <textarea id="msg" name="Message" placeholder="Goals, questions, or a policy you'd like reviewed…"></textarea>
+        </div>
+      </fieldset>
 
       <label class="consent">
         <input type="checkbox" name="Consent" value="Yes" required>
-        <span>By clicking below, I agree to be contacted by Christopher Chau, a licensed independent agent, via phone, text, or email about life insurance products. I consent to receive automated calls, texts, and pre-recorded messages at the number provided, even if my number is on a Do Not Call registry. Message and data rates may apply. You can opt out at any time. Consent is not a condition of purchasing coverage. View the <a href="privacy.html">Privacy Policy</a>.</span>
+        <span>I agree to be contacted by Christopher Chau by phone, text, or email about life insurance. Message and data rates may apply. You can opt out at any time. Consent is not required to purchase coverage. See the <a href="privacy.html">Privacy Policy</a>.</span>
       </label>
 
-      <button class="btn" type="submit">Request a Quote & Policy Review</button>
+      <button class="btn" type="submit">Request Quote & Consultation</button>
       <div id="status" role="status"></div>
     </form>
 
@@ -201,7 +226,7 @@ footer a:hover{color:var(--gold)}
     <div class="foot-grid">
       <div>
         <h3>Christopher Chau</h3>
-        <p>Independent Life Insurance Agent<br>
+        <p>Independent Insurance Consultant<br>
         Based in Boston, MA &amp; Miami, FL<br>
         <a href="tel:6179593437">617-959-3437</a><br>
         <a href="mailto:cchau.insurance@gmail.com">cchau.insurance@gmail.com</a><br><br>
@@ -213,7 +238,7 @@ footer a:hover{color:var(--gold)}
       </div>
     </div>
     <div class="legal">
-      Christopher Chau is a licensed life insurance agent. He may only discuss or sell products in states where he holds active regulatory licensing credentials. This website is an independent marketing portal and is not affiliated with, endorsed by, or connected to any government agency, Medicare, or Social Security. 
+      Christopher Chau is a licensed life insurance broker. He may only discuss or sell products in states where he holds active regulatory licensing credentials. This website is an independent marketing portal and is not affiliated with, endorsed by, or connected to any government agency, Medicare, or Social Security. 
       <br><br>
       All requested quotes, rate calculations, and consultation models are non-binding premium estimates utilizing available state rate grids; final policy approvals, pricing tiers, features, and product availability are determined solely by individual insurance carrier underwriting guidelines. Cash value permanent life insurance policies, including Indexed Universal Life (IUL) architectures, involve internal cost structures, fees, and distinct charges. These products are fundamentally insurance vehicles designed for death benefit protection and asset continuity—they are not an investment, and any projected cash growth or non-guaranteed values are subject to market index performance fluctuations and are never guaranteed. 
       <br><br>
