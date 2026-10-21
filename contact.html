@@ -136,27 +136,28 @@ footer a:hover{color:var(--gold)}
 <fieldset>
   <legend>1. About you</legend>
   
-  <!-- Row 1: Full Name stretched out to maximum width -->
-  <div class="row" style="width: 100%; margin-bottom: 15px;">
-    <div class="field" style="width: 100%; display: block;">
+  <!-- Row 1: Full Name with forced maximum width override -->
+  <div class="row" style="width: 100% !important; display: block !important; margin-bottom: 15px;">
+    <div class="field" style="width: 100% !important; display: block !important;">
       <label class="l" for="fn">Full name *</label>
-      <input type="text" id="fn" name="Full Name" required autocomplete="name" style="width: 100%; max-width: 100%; box-sizing: border-box; display: block;">
+      <input type="text" id="fn" name="Full Name" required autocomplete="name" style="width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; display: block !important;">
     </div>
   </div>
   
-  <!-- Row 2: Phone and Email side-by-side below it -->
-  <div class="row" style="display: flex; gap: 15px; width: 100%;">
-    <div class="field" style="flex: 1;">
+  <!-- Row 2: Phone and Email side-by-side underneath -->
+  <div class="row" style="display: flex !important; gap: 15px !important; width: 100% !important;">
+    <div class="field" style="flex: 1 !important;">
       <label class="l" for="ph">Phone *</label>
-      <input type="tel" id="ph" name="Phone" required autocomplete="tel" style="width: 100%; box-sizing: border-box;">
+      <input type="tel" id="ph" name="Phone" required autocomplete="tel" style="width: 100% !important; box-sizing: border-box !important;">
     </div>
-    <div class="field" style="flex: 1;">
+    <div class="field" style="flex: 1 !important;">
       <label class="l" for="em">Email *</label>
-      <input type="email" id="em" name="Email" required autocomplete="email" style="width: 100%; box-sizing: border-box;">
+      <input type="email" id="em" name="Email" required autocomplete="email" style="width: 100% !important; box-sizing: border-box !important;">
     </div>
   </div>
 
 </fieldset>
+
 
 
 
