@@ -27,68 +27,26 @@ section{padding:76px 0}
 .center{text-align:center}.center .section-sub{margin-left:auto;margin-right:auto}
 .alt{background:var(--bg)}
 
-/* Mobile-First Header Architecture */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--line);
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;flex-wrap:wrap;gap:8px 16px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;color:var(--navy);text-decoration:none}
+.links{display:flex;gap:24px;align-items:center}
+.nav a.link{color:var(--ink);text-decoration:none;font-size:14px;font-weight:500;padding-bottom:3px;border-bottom:2px solid transparent}
+.nav a.link:hover{color:var(--gold)}
+.nav a.link.active{border-bottom-color:var(--gold);color:var(--navy)}
+@media(max-width:820px){
+  .nav{justify-content:space-between}
+  .links{order:3;width:100%;justify-content:space-between;gap:10px;padding-top:6px;border-top:1px solid var(--line)}
+  .nav a.link{font-size:13px}
 }
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-}
-.brand {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 22px;
-  color: var(--navy);
-  text-decoration: none;
-  white-space: nowrap;
-}
-.links {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-.nav a.link {
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding-bottom: 3px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s;
-}
-.nav a.link:hover { color: var(--gold); }
-.nav a.link.active { border-bottom-color: var(--gold); color: var(--navy); }
 
 /* Buttons */
-.btn {
-  display: inline-block;
-  background: var(--navy);
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  transition: .2s;
-  font-family: inherit;
-  white-space: nowrap;
-  text-align: center;
-}
-.btn:hover { background: var(--navy-2); transform: translateY(-1px); }
-.btn.small { padding: 10px 20px; font-size: 14px; }
-.btn.ghost { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); margin-left: 10px; }
-.btn.ghost:hover { background: var(--navy); color: #fff; }
-
+.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:12px 24px;border-radius:4px;font-weight:600;font-size:14px;border:none;cursor:pointer;transition:.2s;font-family:inherit;white-space:nowrap;text-align:center}
+.btn:hover{background:var(--navy-2);transform:translateY(-1px)}
+.btn.small{padding:10px 20px;font-size:14px}
+.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy);margin-left:10px}
+.btn.ghost:hover{background:var(--navy);color:#fff}
 
 /* Hero */
 .hero{background:linear-gradient(180deg,var(--bg),#fff);padding:76px 0 66px}
@@ -197,74 +155,14 @@ textarea{min-height:100px;resize:vertical}
 .doc p,.doc li{font-size:15.5px;margin-bottom:12px}
 .doc ul{margin-left:22px}
 
-/* Institutional Side-by-Side Footer Layout */
-footer {
-  background: #0E1730;
-  color: #9AA6BC;
-  padding: 56px 0 30px;
-  font-size: 13px;
-  text-align: left;
-}
-footer h3 {
-  color: #fff;
-  font-size: 17px;
-  margin-bottom: 12px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-.foot-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr; /* Prevents columns from stacked folding */
-  gap: 40px;
-}
-footer a { color: #fff; text-decoration: none; transition: color 0.2s ease; }
-footer a:hover { color: var(--gold); }
-.states { line-height: 1.9; font-size: 12px; color: #9AA6BC; }
-.legal { border-top: 1px solid #26324F; margin-top: 32px; padding-top: 22px; font-size: 12px; line-height: 1.7; color: #7C889F; }
-
-/* 📱 ADVANCED MOBILE RESPONSIVE MEDIA OVERRIDES */
-@media (max-width: 820px) {
-  /* Locks brand left and forces request button to stay locked in the top right */
-  .nav {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-  }
-  /* Drops navigation row lines down to a clean sub-row header line */
-  .links {
-    grid-column: span 2;
-    width: 100%;
-    justify-content: center;
-    gap: 16px;
-    padding-top: 12px;
-    margin-top: 8px;
-    border-top: 1px solid var(--line);
-  }
-  .nav a.link { font-size: 13px; }
-  .brand { font-size: 19px; }
-  .nav .btn.small { padding: 8px 16px; font-size: 13px; }
-  @media(max-width:480px){.btn.ghost{margin-left:0;margin-top:10px}}
-
-  /* Keeps states perfectly positioned on the right side of the phone viewport */
-  .foot-grid {
-    grid-template-columns: 1.2fr 1.8fr;
-    gap: 24px;
-  }
-  .states { font-size: 11px; line-height: 1.7; }
-}
-
-@media (max-width: 580px) {
-  /* Scales typography elements down so they remain side-by-side on tight screens */
-  .foot-grid {
-    grid-template-columns: 1fr 1.4fr;
-    gap: 16px;
-  }
-  .states { font-size: 10.5px; }
-}
-
+/* Footer */
+footer{background:#0E1730;color:#9AA6BC;padding:56px 0 30px;font-size:13px}
+footer h3{color:#fff;font-size:17px;margin-bottom:10px;font-family:'Inter',sans-serif;font-weight:600}
+.foot-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:40px}
+@media(max-width:720px){.foot-grid{grid-template-columns:1fr}}
+footer a{color:#fff;text-decoration:none}
+.states{line-height:1.9;font-size:11.5px}
+.legal{border-top:1px solid #26324F;margin-top:32px;padding-top:22px;font-size:11.5px;line-height:1.7;color:#7C889F}
 
 </style>
 </head>
@@ -351,31 +249,28 @@ footer a:hover { color: var(--gold); }
 
 <footer>
   <div class="container">
-    <div class="foot-grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px; text-align: left;">
+    <div class="foot-grid">
       <div>
-        <h3 style="color: #FFFFFF; font-size: 16px; margin-bottom: 15px;">Christopher Chau</h3>
-        <p style="color: #94A3B8; line-height: 1.6;">
-          Independent Insurance Consultant<br>
-          Based in Boston, MA &amp; Miami, FL<br>
-          <a href="tel:6179593437" style="color: #CBD5E1; text-decoration: none;">617-959-3437</a><br>
-          <a href="mailto:cchau.insurance@gmail.com" style="color: #CBD5E1; text-decoration: none;">cchau.insurance@gmail.com</a><br><br>
-          <span style="color: #64748B; font-style: italic;">Privacy Policy Available Upon Request</span>
-        </p>
+        <h3>Christopher Chau</h3>
+        <p>Independent Insurance Consultant<br>
+        Based in Boston, MA &amp; Miami, FL<br>
+        <a href="tel:6179593437">617-959-3437</a><br>
+        <a href="mailto:cchau.insurance@gmail.com">cchau.insurance@gmail.com</a><br><br>
+        <a href="privacy.html" style="text-decoration:underline">Privacy Policy</a></p>
       </div>
       <div>
-        <h3 style="color: #FFFFFF; font-size: 16px; margin-bottom: 15px;">Active Licensing (Life Insurance) / NPN</h3>
-        <div class="states" style="color: #94A3B8; line-height: 1.8; font-size: 12px;">Alabama (30031696910) · Arizona (21221078) · California (4394543) · Colorado (849833) · Florida (G132455) · Georgia (3724856) · Idaho (21221078) · Indiana (4023131) · Iowa (21221078) · Kansas (21221078) · Kentucky (DOI-1348578) · Louisiana (1171569) · Maine (PRN488304) · Maryland (71513527) · Massachusetts (21221078) · Michigan (21221078) · Mississippi (11048317) · Missouri (3003169698) · Nevada (4022367) · New Mexico (21221078) · North Carolina (21221078) · Ohio (1592406) · Oklahoma (3003169678) · Oregon (21221078) · South Carolina (21221078) · Tennessee (3003169651) · Texas (3197663) · Virginia (1450614) · Washington (1263988) · West Virginia (21221078)</div>
+        <h3>Active Licensing (Life Insurance) / NPN</h3>
+        <div class="states">Alabama (30031696910) · Arizona (21221078) · California (4394543) · Colorado (849833) · Florida (G132455) · Georgia (3724856) · Idaho (21221078) · Indiana (4023131) · Iowa (21221078) · Kansas (21221078) · Kentucky (DOI-1348578) · Louisiana (1171569) · Maine (PRN488304) · Maryland (71513527) · Massachusetts (21221078) · Michigan (21221078) · Mississippi (11048317) · Missouri (3003169698) · Nevada (4022367) · New Mexico (21221078) · North Carolina (21221078) · Ohio (1592406) · Oklahoma (3003169678) · Oregon (21221078) · South Carolina (21221078) · Tennessee (3003169651) · Texas (3197663) · Virginia (1450614) · Washington (1263988) · West Virginia (21221078)</div>
       </div>
     </div>
-    
-    <div class="legal" style="font-size: 12px; color: #94A3B8; line-height: 1.6; margin-top: 30px; border-top: 1px solid #334155; padding-top: 20px; text-align: left;">
+    <div class="legal">
       Christopher Chau is a licensed life insurance broker. He may only discuss or sell products in states where he holds active regulatory licensing credentials. This website is an independent marketing portal and is not affiliated with, endorsed by, or connected to any government agency, Medicare, or Social Security. 
       <br><br>
       All requested quotes, rate calculations, and consultation models are non-binding premium estimates utilizing available state rate grids; final policy approvals, pricing tiers, features, and product availability are determined solely by individual insurance carrier underwriting guidelines. Cash value permanent life insurance policies, including Indexed Universal Life (IUL) architectures, involve internal cost structures, fees, and distinct charges. These products are fundamentally insurance vehicles designed for death benefit protection and asset continuity—they are not an investment, and any projected cash growth or non-guaranteed values are subject to market index performance fluctuations and are never guaranteed. 
       <br><br>
       Replacing or surrendering an existing outside policy may carry serious hidden tax penalties, costs, or long-term coverage disadvantages. Clients are explicitly advised to never cancel or drop any active policy until a new replacement contract has been officially approved, issued, and verified in force by the receiving carrier. All information, definitions, and FAQ responses on this site are designed strictly for general education and asset protection awareness; nothing contained herein constitutes professional tax, legal, or investment advice. Any potential premium savings or increases to your current coverage limits uncovered during a policy audit are conditional and are not guaranteed.
       <br><br>
-      &copy; 2026 Christopher Chau. All rights reserved.
+      © <span id="yr"></span> Christopher Chau. All rights reserved.
     </div>
   </div>
 </footer>
