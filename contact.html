@@ -255,6 +255,21 @@ form.addEventListener('submit', async (e) => {
     statusEl.innerHTML = 'Something went wrong. Please call 617-959-3437 or email <a href="mailto:cchau.insurance@gmail.com" style="color:inherit">cchau.insurance@gmail.com</a>.';
   }
 });
+  <!-- JavaScript to capture and push Eastern Time to your hidden field -->
+<script>
+  document.getElementById("intakeForm").addEventListener("submit", function() {
+    // Calculates the exact current moment locked to Eastern Time
+    const now = new Date();
+    const easternTimeStr = now.toLocaleString("en-US", {
+      timeZone: "America/New_York",
+      timeZoneName: "short"
+    });
+
+    // Drops the Eastern Time record directly into your hidden form field before sending
+    document.getElementById("tcpa_timestamp").value = easternTimeStr;
+  });
+</script>
+
 </script>
 </body>
 </html>
