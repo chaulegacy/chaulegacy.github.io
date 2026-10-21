@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Christopher Chau, Independent Insurance Consultant</title>
+<title>Services | Christopher Chau, Licensed Life Insurance Broker</title>
 <meta name="description" content="Clear explanations of your strategic options, from designing custom new coverage to executing an advanced, second-look audit at what you already have.">
-<link rel="preconnect" href="https://googleapis.com">
-<link rel="preconnect" href="https://gstatic.com" crossorigin>
-<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#14213D; --navy-2:#1F2F52; --gold:#B08D57; --gold-soft:#F3EBDD;
@@ -53,18 +53,6 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backd
   .btn.ghost{margin-left:0;margin-top:10px}
   .nav .btn{padding:8px 14px;font-size:12px}
 }
-
-/* Hero Section */
-.hero{background:linear-gradient(180deg,var(--bg),#fff);padding:76px 0 66px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-.hero h1{font-size:44px;margin-bottom:18px}
-.hero p.lead{font-size:18px;color:var(--muted);margin-bottom:30px;max-width:540px}
-.trust{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;font-size:13px;color:var(--muted)}
-.trust b{display:block;font-family:'Playfair Display',serif;font-size:26px;color:var(--navy)}
-.photo-wrap{position:relative;max-width:380px;margin:0 auto}
-.photo-wrap::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--gold);border-radius:10px;z-index:0}
-.photo-wrap img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;background:var(--gold-soft);box-shadow:0 18px 40px rgba(20,33,61,.15)}
-@media(max-width:820px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero p.lead{margin-left:auto;margin-right:auto}.trust{justify-content:center}.hero h1{font-size:34px}.photo-wrap{order:-1;max-width:270px}}
 
 /* Inner Page Header */
 .page-head{background:linear-gradient(180deg,var(--bg),#fff);padding:60px 0 44px;text-align:center;border-bottom:1px solid var(--line)}
@@ -179,38 +167,13 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backd
 .checks li::before{content:"";position:absolute;left:0;top:16px;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:bold}
 .checks li b{color:var(--navy);font-size:16px}
 .note{font-size:12.5px;color:var(--muted);margin-top:20px;line-height:1.5;font-style:italic}
+
 @media(max-width:820px){
   .two{grid-template-columns:1fr;gap:40px}
   .cards-asymmetric { grid-template-columns: 1fr; }
   .card-wide { grid-column: span 1; grid-template-columns: 1fr; gap: 12px; }
   .help-row { grid-template-columns: 1fr; gap: 12px; padding-bottom: 24px; }
 }
-
-/* About Section Styles */
-.about{padding:80px 0}
-.about p{margin-bottom:18px;font-size:16px;line-height:1.7;color:var(--ink)}
-.pledge{background:var(--gold-soft);border-left:4px solid var(--gold);padding:24px 28px;border-radius:0 8px 8px 0;box-shadow:0 4px 15px rgba(176,141,87,0.05)}
-.pledge h3{font-size:22px;margin-bottom:14px;font-family:'Playfair Display',serif;color:var(--navy)}
-.pledge ul{list-style:none}
-.pledge li{padding:8px 0 8px 24px;position:relative;font-size:15px;line-height:1.5;color:var(--ink)}
-.pledge li::before{content:"•";position:absolute;left:4px;color:var(--gold);font-weight:700;font-size:18px;top:4px}
-.pledge li strong{color:var(--navy-2)}
-.about-photo{max-width:320px;margin:0 0 28px;position:relative}
-.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;background:var(--gold-soft);box-shadow:0 12px 30px rgba(20,33,61,.12)}
-@media(max-width:820px){.about-photo{margin:0 auto 24px}}
-
-/* Process Section (How It Works) */
-.process{background:var(--navy);padding:80px 0}
-.process .section-title{color:#fff}.process .section-sub{color:#B8C2D3;margin-bottom:50px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px}
-.step .num{font-family:'Playfair Display',serif;font-size:42px;color:var(--gold);font-weight:700}
-.step h3{color:#fff;font-size:20px;margin:6px 0 10px;font-family:'Inter',sans-serif;font-weight:600}
-.step p{font-size:14.5px;color:#B8C2D3;line-height:1.6}
-
-/* CTA Strip Section */
-.cta{background:var(--gold-soft);padding:64px 0;text-align:center}
-.cta h2{font-size:32px;margin-bottom:12px;font-family:'Playfair Display',serif;color:var(--navy)}
-.cta p{color:var(--ink);font-size:16px;margin-bottom:26px}
 
 /* Institutional Footer Layout */
 footer{background:#0E1730;color:#9AA6BC;padding:56px 0 30px;font-size:13px;text-align:left}
@@ -220,3 +183,192 @@ footer h3{color:#fff;font-size:17px;margin-bottom:12px;font-family:'Inter',sans-
 footer a{color:#fff;text-decoration:none;transition:color 0.2s ease}
 footer a:hover{color:var(--gold)}
 .states{line-height:1.9;font-size:12px;color:#9AA6BC}
+.legal{border-top:1px solid #26324F;margin-top:32px;padding-top:22px;font-size:12px;line-height:1.7;color:#7C889F}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="brand">Christopher Chau</a>
+    <div class="links">
+      <a class="link" href="index.html">Home</a>
+      <a class="link active" href="services.html">Services</a>
+      <a class="link" href="about.html">About</a>
+      <a class="link" href="faq.html">FAQ</a>
+      <a class="link" href="contact.html">Contact</a>
+    </div>
+    <a class="btn small" href="contact.html">Request Quote & Consultation</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="container">
+    <div class="eyebrow">Services</div>
+    <h1>Coverage and Policy Reviews</h1>
+    <p>Clear explanations of your strategic options, from designing custom new coverage to executing an advanced, second-look audit at what you already have.</p>
+  </div>
+</div>
+
+<!-- Re-Engineered Coverage Options Section (Updated Order) -->
+<section>
+  <div class="container" style="text-align: left;">
+    <div class="eyebrow">Coverage Options</div>
+    <h2 class="section-title">Coverage built around your financial goals</h2>
+    <p class="section-sub">I will help you understand the mechanics, costs, and unique features of each option before you decide.</p>
+    
+    <div class="cards-asymmetric">
+      <!-- 1. Term Life (Natural Short Card) -->
+      <div class="card-organic">
+        <div class="icon"></div>
+        <h3>Term Life</h3>
+        <p>Affordable, high-limit protection for a set number of years, engineered to replace your income while your family depends on it most.</p>
+      </div>
+
+      <!-- 2. Mortgage Protection (Natural Short Card) -->
+      <div class="card-organic">
+        <div class="icon"></div>
+        <h3>Mortgage Protection</h3>
+        <p>Specialized life insurance structured so your loved ones can instantly wipe out your remaining mortgage balance and keep the home safe.</p>
+      </div>
+
+      <!-- 3. Whole Life & Final Expense (Deep Row / Wide Card) -->
+      <div class="card-organic card-wide">
+        <div class="icon"></div>
+        <div>
+          <h3>Whole Life &amp; Final Expense</h3>
+          <p>Lifelong coverage with locked-in, fixed premiums. Designed to guarantee your family can cover funeral and legacy costs. Early-start plans for children are available to lock in historically low premium rates.</p>
+        </div>
+      </div>
+
+      <!-- 4. Advanced Cash Accumulation (IUL) (Anchored at the Bottom / Wide Card) -->
+      <div class="card-organic card-wide">
+        <div class="icon"></div>
+        <div>
+          <h3>Advanced Cash Accumulation (IUL)</h3>
+          <p>Flexible permanent protection with compounding cash value linked to market index performance. Options range from a streamlined, fast-approval <b>"Easy Solve"</b> setup to an advanced <b>"Maximum Funded Cash Value"</b> architecture built to maximize cash accumulation while keeping internal protection costs to the legal IRS minimum.</p>
+        </div>
+      </div>
+    </div> <!-- Closes .cards-asymmetric -->
+  </div> <!-- Closes .container -->
+</section>
+
+<section class="alt" id="who">
+  <div class="container" style="text-align: left;">
+    <div class="eyebrow">Who I Help</div>
+    <h2 class="section-title">Find the situation that sounds like yours</h2>
+    <p class="section-sub">Every household is different. Select the strategic path that fits your goals, and I will pre-analyze your state options from there.</p>
+    
+    <div class="who-i-help-flex">
+      <div class="help-row">
+        <h3>Homeowners</h3>
+        <div>
+          <p>Your home is likely your largest financial asset. Let's insulate your mortgage so your family never loses their built-up home equity if the unexpected happens.</p>
+          <a class="more" href="contact.html">Check Mortgage Protection Options</a>
+        </div>
+      </div>
+
+      <div class="help-row">
+        <h3>Parents &amp; Young Families</h3>
+        <div>
+          <p>Strategic income protection while your children are growing up, plus guaranteed early-start whole life policies to build a secure financial foundation for your kids.</p>
+          <a class="more" href="contact.html">Protect My Family's Future</a>
+        </div>
+      </div>
+
+      <div class="help-row">
+        <h3>Adult Children of Aging Parents</h3>
+        <div>
+          <p>Proactive planning so a parent's final expenses never fall as an unexpected financial burden on the family. Simple, guaranteed permanent options are available.</p>
+          <a class="more" href="contact.html">Secure Final Expense Plans</a>
+        </div>
+      </div>
+
+      <div class="help-row">
+        <h3>Wealth Builders</h3>
+        <div>
+          <p>If you want premium permanent coverage explicitly designed around an advanced cash-accumulation component, I will walk you through the structural parameters of a Max-Funded IUL.</p>
+          <a class="more" href="contact.html">Explore Max-Funded Cash Value</a>
+        </div>
+      </div>
+
+      <div class="help-row">
+        <h3>Policyholders Requiring an Audit</h3>
+        <div>
+          <p>Not completely sure what you are paying for, or if you are overpaying your current carrier? Let's run a clinical diagnostic review on your active portfolio together.</p>
+          <a class="more" href="#review">How an Audit Works</a>
+        </div>
+      </div>
+    </div> <!-- Closes .who-i-help-flex -->
+  </div> <!-- Closes .container -->
+</section>
+
+<section id="review">
+  <div class="container two">
+    <div>
+      <div class="eyebrow">Portfolio Review & Audit</div>
+      <h2 class="section-title">Is your active policy truly performing the way you were told?</h2>
+      <p class="section-sub" style="margin-bottom:0">Many people discover during an audit that their current coverage is smaller, more temporary, or carries significantly more hidden structural traps than they were led to believe. A clinical review takes the guesswork out, and I will tell you honestly if what you currently own is already an ideal fit.</p>
+      <p class="note">Results depend on your age, health status, and the specific terms of the policy you hold. No premium modifications or coverage increases can be guaranteed until officially underwritten.</p>
+    </div>
+    <ul class="checks">
+      <li><b>Identify your true structural class.</b> Uncover exactly what you own—whether it is a true term policy, a restrictive accidental-death-only gimmick, or a graded-benefit trap.</li>
+      <li><b>Secure coverage maximization & rate minimization.</b> Review updated market parameters to verify if you qualify for significantly more coverage at your exact current cost, or identical coverage thresholds for less monthly outlay.</li>
+      <li><b>Tax-free portfolio consolidation.</b> Streamline multiple scattered or fragmented policies into a singular, highly efficient asset dashboard to simplify your household finances.</li>
+      <li><b>Legacy equity extraction.</b> Check mature permanent policies for hidden, accrued cash surrender value. In many cases, we can leverage those existing funds via tax-free distributions to deploy larger coverage limits with zero out-of-pocket costs.</li>
+      <li><b>Lock in expiring conversion rights.</b> Understand your absolute deadline parameters before a term policy ends, including hidden conversion privileges that let you upgrade to permanent, cash-building assets with no new medical exams.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container center">
+    <div class="eyebrow">Program Access</div>
+    <h2 class="section-title" style="font-size:28px">Custom Options Engineered for Your Life</h2>
+    <p style="font-size:14px;color:var(--muted);max-width:760px;margin:0 auto;line-height:2;text-align:center;">
+      As a licensed independent consultant, I maintain strategic relationships with a broad network of well-known, top-rated national carriers. This extensive structural marketplace access allows me to analyze multiple institutional rate grids to design a customized framework for your unique financial situation, rather than forcing your needs into a single corporate template. <em>Note: Framework availability varies strictly by state regulatory guidelines and individual underwriting eligibility.</em>
+    </p>
+    <p style="font-size:14px;color:var(--muted);max-width:760px;margin:22px auto 0;line-height:2;text-align:center;">
+      <strong>Already hold an active legacy policy?</strong> If you maintain coverage with an insurance provider outside my immediate advisory network, I am glad to run a clinical diagnostic review on your current benefits with you. If our audit reveals that adjustments align with your wealth preservation or cash growth goals, I will help you evaluate your options and safely navigate a structured transition with zero out-of-pocket friction.
+    </p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container" style="text-align:center;">
+    <h2>Not sure where to start?</h2>
+    <p>Tell me a little about your situation and I will point you in the right direction.</p>
+    <a class="btn" href="contact.html">Request a Strategic Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h3>Christopher Chau</h3>
+        <p>Licensed Life Insurance Broker<br>
+        Boston, MA &amp; Miami, FL<br>
+        <a href="tel:6179593437">617-959-3437</a><br>
+        <a href="mailto:cchau.insurance@gmail.com">cchau.insurance@gmail.com</a><br><br>
+        <a href="privacy.html" style="text-decoration:underline">Privacy Policy</a></p>
+      </div>
+      <div>
+        <h3>Active Licensing (Life Insurance) / NPN</h3>
+        <div class="states">Alabama (30031696910) · Arizona (21221078) · California (4394543) · Colorado (849833) · Florida (G132455) · Georgia (3724856) · Idaho (21221078) · Indiana (4023131) · Iowa (21221078) · Kansas (21221078) · Kentucky (DOI-1348578) · Louisiana (1171569) · Maine (PRN488304) · Maryland (71513527) · Massachusetts (21221078) · Michigan (21221078) · Mississippi (11048317) · Missouri (3003169698) · Nevada (4022367) · New Mexico (21221078) · North Carolina (21221078) · Ohio (1592406) · Oklahoma (3003169678) · Oregon (21221078) · South Carolina (21221078) · Tennessee (3003169651) · Texas (3197663) · Virginia (1450614) · Washington (1263988) · West Virginia (21221078)</div>
+      </div>
+    </div>
+    <div class="legal">
+      Christopher Chau is a licensed life insurance broker. He may only discuss or sell products in states where he holds active regulatory licensing credentials. This website is an independent marketing portal and is not affiliated with, endorsed by, or connected to any government agency, Medicare, or Social Security. 
+      <br><br>
+      All requested quotes, rate calculations, and consultation models are non-binding premium estimates utilizing available state rate grids; final policy approvals, pricing tiers, features, and product availability are determined solely by individual insurance carrier underwriting guidelines. Cash value permanent life insurance policies, including Indexed Universal Life (IUL) architectures, involve internal cost structures, fees, and distinct charges. These products are fundamentally insurance vehicles designed for death benefit protection and asset continuity—they are not an investment, and any projected cash growth or non-guaranteed values are subject to market index performance fluctuations and are never guaranteed. 
+      <br><br>
+      Replacing or surrendering an existing outside policy may carry serious hidden tax penalties, costs, or long-term coverage disadvantages. Clients are explicitly advised to never cancel or drop any active policy until a new replacement contract has been officially approved, issued, and verified in force by the receiving carrier. All information, definitions, and FAQ responses on this site are designed strictly for general education and asset protection awareness; nothing contained herein constitutes professional tax, legal, or investment advice. Any potential premium savings or increases to your current coverage limits uncovered during a policy audit are conditional and are not guaranteed.
+      <br><br>
+      © <span id="yr"></span> Christopher Chau. All rights reserved.
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
