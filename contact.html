@@ -122,8 +122,10 @@ footer a:hover{color:var(--gold)}
 </div>
 
 <section>
-  <div class="container">
-
+  <!-- Form Section Wrapper -->
+  <div class="form-container-box" style="max-width: 600px; margin: 0 auto 30px auto; padding: 15px;">
+    
+    <!-- Fixed Action Route to your cchau.insurance@gmail.com inbox -->
     <form class="form-card" id="intakeForm" action="https://formsubmit.co" method="POST">
 
       <input type="hidden" name="_subject" value="New consultation request from your website">
@@ -134,38 +136,35 @@ footer a:hover{color:var(--gold)}
       <!-- TCPA COMPLIANCE AUDIT FIELD -->
       <input type="hidden" id="tcpa_timestamp" name="TCPA Written Consent Timestamp" value="">
 
-<fieldset>
-  <legend>1. About you</legend>
-  
-  <!-- Row 1: Full Name with forced maximum width override -->
-  <div class="row" style="width: 100% !important; display: block !important; margin-bottom: 15px;">
-    <div class="field" style="width: 100% !important; display: block !important;">
-      <label class="l" for="fn">Full name *</label>
-      <input type="text" id="fn" name="Full Name" required autocomplete="name" style="width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; display: block !important;">
-    </div>
-  </div>
-  
-  <!-- Row 2: Phone and Email side-by-side underneath -->
-  <div class="row" style="display: flex !important; gap: 15px !important; width: 100% !important;">
-    <div class="field" style="flex: 1 !important;">
-      <label class="l" for="ph">Phone *</label>
-      <input type="tel" id="ph" name="Phone" required autocomplete="tel" style="width: 100% !important; box-sizing: border-box !important;">
-    </div>
-    <div class="field" style="flex: 1 !important;">
-      <label class="l" for="em">Email *</label>
-      <input type="email" id="em" name="Email" required autocomplete="email" style="width: 100% !important; box-sizing: border-box !important;">
-    </div>
-  </div>
-
-</fieldset>
-
-
-
       <fieldset>
+        <legend>1. About you</legend>
+        
+        <!-- Row 1: Full Name with forced maximum width override -->
+        <div class="row" style="width: 100% !important; display: block !important; margin-bottom: 15px;">
+          <div class="field" style="width: 100% !important; display: block !important;">
+            <label class="l" for="fn">Full name *</label>
+            <input type="text" id="fn" name="Full Name" required autocomplete="name" style="width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; display: block !important;">
+          </div>
+        </div>
+        
+        <!-- Row 2: Phone and Email side-by-side underneath -->
+        <div class="row" style="display: flex !important; gap: 15px !important; width: 100% !important;">
+          <div class="field" style="flex: 1 !important;">
+            <label class="l" for="ph">Phone *</label>
+            <input type="tel" id="ph" name="Phone" required autocomplete="tel" style="width: 100% !important; box-sizing: border-box !important;">
+          </div>
+          <div class="field" style="flex: 1 !important;">
+            <label class="l" for="em">Email *</label>
+            <input type="email" id="em" name="Email" required autocomplete="email" style="width: 100% !important; box-sizing: border-box !important;">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset style="margin-top: 15px;">
         <legend>2. How can I best help?</legend>
-        <div class="field">
+        <div class="field" style="margin-bottom: 15px;">
           <label class="l" for="obj">How can I assist your family today? *</label>
-          <select id="obj" name="Objective" required>
+          <select id="obj" name="Objective" required style="width: 100%; box-sizing: border-box;">
             <option value="">Select an option…</option>
             <option>I want to set up a brand new life insurance plan</option>
             <option>I want to look over/optimize an existing policy</option>
@@ -173,31 +172,33 @@ footer a:hover{color:var(--gold)}
         </div>
         <div class="field">
           <label class="l" for="bt">Preferred Time for a Quick Call *</label>
-          <select id="bt" name="Best Time" required>
+          <select id="bt" name="Best Time" required style="width: 100%; box-sizing: border-box;">
             <option value="">Select a time…</option>
             <option>Morning</option>
             <option>Afternoon</option>
             <option>Evening</option>
           </select>
         </div>
-
       </fieldset>
 
-      <label class="consent">
+      <label class="consent" style="display: block; margin: 20px 0;">
         <input type="checkbox" name="Consent" value="Yes" required>
         <span>By clicking below, I agree to be contacted by Christopher Chau, a licensed independent agent, via phone, text, or email about life insurance products. I consent to receive automated calls, texts, and pre-recorded messages at the number provided, even if my number is on a Do Not Call registry. Message and data rates may apply. You can opt out at any time. Consent is not a condition of purchasing coverage. View the <a href="privacy.html">Privacy Policy</a>.</span>
       </label>
 
-      <button class="btn" type="submit">Request a Quote & Policy Review</button>
+      <!-- The Button is now firmly locked inside the form block container -->
+      <button class="btn" type="submit" style="width: 100% !important; display: block !important;">Request a Quote & Policy Review</button>
       <div id="status" role="status"></div>
     </form>
+  </div>
 
-    <div class="hours">
-      <div><b>Hours (Eastern Time)</b>Mon–Fri: 9 AM – 9 PM<br>Saturday: 9 AM – 4:30 PM</div>
-      <div><b>Prefer to call?</b><a href="tel:6179593437" style="font-weight:600">617-959-3437</a><br><a href="mailto:cchau.insurance@gmail.com">cchau.insurance@gmail.com</a></div>
-    </div>
+  <!-- Separate Info Section (Forces Hours below the form box layout entirely) -->
+  <div class="hours" style="max-width: 600px; margin: 40px auto 0 auto; padding-top: 20px; border-top: 1px solid #ccc; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
+    <div><b>Hours (Eastern Time)</b><br>Mon–Fri: 9 AM – 9 PM<br>Saturday: 9 AM – 4:30 PM</div>
+    <div><b>Prefer to call?</b><br><a href="tel:6179593437" style="font-weight:600">617-959-3437</a><br><a href="mailto:cchau.insurance@gmail.com">cchau.insurance@gmail.com</a></div>
   </div>
 </section>
+
 
 <footer>
   <div class="container">
