@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ | Christopher Chau, Independent Insurance Consultant</title>
+<title>FAQ | Christopher Chau, Licensed Life Insurance Agent</title>
 <meta name="description" content="Straight answers about life insurance costs, how agents are paid, health questions, applying, and policy reviews.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,68 +26,144 @@ section{padding:76px 0}
 .center{text-align:center}.center .section-sub{margin-left:auto;margin-right:auto}
 .alt{background:var(--bg)}
 
-/* Header & Navigation Layout */
-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;flex-wrap:nowrap;gap:24px}
-.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--navy);text-decoration:none;white-space:nowrap}
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;flex-wrap:wrap;gap:8px 16px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:21px;color:var(--navy);text-decoration:none}
 .links{display:flex;gap:24px;align-items:center}
-.nav a.link{color:var(--ink);text-decoration:none;font-size:14px;font-weight:500;padding-bottom:3px;border-bottom:2px solid transparent;transition:color 0.2s}
+.nav a.link{color:var(--ink);text-decoration:none;font-size:14px;font-weight:500;padding-bottom:3px;border-bottom:2px solid transparent}
 .nav a.link:hover{color:var(--gold)}
 .nav a.link.active{border-bottom-color:var(--gold);color:var(--navy)}
+@media(max-width:820px){
+  .nav{justify-content:space-between}
+  .links{order:3;width:100%;justify-content:space-between;gap:10px;padding-top:6px;border-top:1px solid var(--line)}
+  .nav a.link{font-size:13px}
+}
 
 /* Buttons */
-.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:12px 24px;border-radius:4px;font-weight:600;font-size:14px;border:none;cursor:pointer;transition:.2s;font-family:inherit;white-space:nowrap;text-align:center}
+.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:13px 26px;border-radius:6px;font-weight:600;font-size:15px;border:none;cursor:pointer;transition:.2s;font-family:inherit}
 .btn:hover{background:var(--navy-2);transform:translateY(-1px)}
 .btn.small{padding:10px 20px;font-size:14px}
 .btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy);margin-left:10px}
 .btn.ghost:hover{background:var(--navy);color:#fff}
+@media(max-width:480px){.btn.ghost{margin-left:0;margin-top:10px}}
 
-/* Mobile Architecture Enhancements */
-@media(max-width:820px){
-  .nav{flex-wrap:wrap;justify-content:space-between;padding:12px 0}
-  .links{order:3;width:100%;justify-content:space-around;gap:10px;padding-top:10px;border-top:1px solid var(--line);margin-top:4px}
-  .nav a.link{font-size:13px}
-  .brand{font-size:20px}
-}
-@media(max-width:480px){
-  .btn.ghost{margin-left:0;margin-top:10px}
-  .nav .btn{padding:8px 14px;font-size:12px}
-}
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--bg),#fff);padding:76px 0 66px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:44px;margin-bottom:18px}
+.hero p.lead{font-size:18px;color:var(--muted);margin-bottom:30px;max-width:540px}
+.trust{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;font-size:13px;color:var(--muted)}
+.trust b{display:block;font-family:'Playfair Display',serif;font-size:26px;color:var(--navy)}
+.photo-wrap{position:relative;max-width:380px;margin:0 auto}
+.photo-wrap::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--gold);border-radius:10px;z-index:0}
+.photo-wrap img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;background:var(--gold-soft);box-shadow:0 18px 40px rgba(20,33,61,.15)}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero p.lead{margin-left:auto;margin-right:auto}.trust{justify-content:center}.hero h1{font-size:34px}.photo-wrap{order:-1;max-width:270px}}
 
-/* Inner Page Header */
+/* Inner page header */
 .page-head{background:linear-gradient(180deg,var(--bg),#fff);padding:60px 0 44px;text-align:center;border-bottom:1px solid var(--line)}
 .page-head h1{font-size:38px;margin-bottom:10px}
 .page-head p{color:var(--muted);max-width:620px;margin:0 auto}
 @media(max-width:600px){.page-head h1{font-size:30px}}
 
-/* FAQ Interactive Section */
-.faq{max-width:780px;margin:0 auto;text-align:left}
-.faq h3.group{font-size:24px;margin:44px 0 12px;padding-bottom:10px;border-bottom:2px solid var(--gold);font-family:'Playfair Display',serif;color:var(--navy)}
-.faq h3.group:first-child{margin-top:0}
-details{border-bottom:1px solid var(--line);padding:6px 0;transition:background 0.2s ease}
-summary{cursor:pointer;font-weight:600;color:var(--navy);padding:18px 40px 18px 0;position:relative;list-style:none;font-size:16.5px;user-select:none;transition:color 0.2s ease}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";position:absolute;right:8px;top:14px;font-size:24px;color:var(--gold);font-weight:400;line-height:1}
-details[open] summary{color:var(--gold)}
-details[open] summary::after{content:"–";top:12px}
-details p,details ul{padding:0 12px 20px 0;color:var(--muted);font-size:15px;line-height:1.6}
-details ul{margin-left:24px}
-details li{margin-bottom:8px}
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;transition:.2s}
+.card:hover{box-shadow:0 12px 28px rgba(20,33,61,.08);transform:translateY(-3px)}
+.icon{width:42px;height:42px;border-radius:50%;background:var(--gold-soft);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:16px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{font-size:14.5px;color:var(--muted)}
+.card a.more{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1.5px solid var(--gold)}
+
+/* Two column / checks */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.checks{list-style:none}
+.checks li{padding:14px 0 14px 36px;border-bottom:1px solid var(--line);position:relative;font-size:15px}
+.checks li::before{content:"✓";position:absolute;left:0;top:14px;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center}
+.checks li b{color:var(--navy)}
+.note{font-size:12.5px;color:var(--muted);margin-top:18px}
+@media(max-width:820px){.two{grid-template-columns:1fr;gap:30px}}
+
+/* About */
+.about p{margin-bottom:16px;font-size:16px}
+.pledge{background:var(--gold-soft);border-left:4px solid var(--gold);padding:20px 24px;border-radius:0 8px 8px 0}
+.pledge h3{font-size:20px;margin-bottom:10px}
+.pledge ul{list-style:none}
+.pledge li{padding:6px 0 6px 22px;position:relative;font-size:14.5px}
+.pledge li::before{content:"•";position:absolute;left:4px;color:var(--gold);font-weight:700}
+.about-photo{max-width:300px;margin:0 0 28px}
+.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;background:var(--gold-soft);box-shadow:0 12px 30px rgba(20,33,61,.12)}
+@media(max-width:820px){.about-photo{margin:0 auto 24px}}
+
+/* Process */
+.process{background:var(--navy)}
+.process .section-title{color:#fff}.process .section-sub{color:#B8C2D3}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+.step .num{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold)}
+.step h3{color:#fff;font-size:19px;margin:4px 0 8px}
+.step p{font-size:14.5px;color:#B8C2D3}
 
 /* CTA strip */
-.cta{background:var(--gold-soft);padding:64px 0;text-align:center}
-.cta h2{font-size:32px;margin-bottom:12px;font-family:'Playfair Display',serif;color:var(--navy)}
-.cta p{color:var(--ink);font-size:16px;margin-bottom:26px}
+.cta{background:var(--gold-soft);padding:54px 0;text-align:center}
+.cta h2{font-size:28px;margin-bottom:10px}
+.cta p{color:var(--muted);margin-bottom:22px}
 
-/* Institutional Footer Layout */
-footer{background:#0E1730;color:#9AA6BC;padding:56px 0 30px;font-size:13px;text-align:left}
-footer h3{color:#fff;font-size:17px;margin-bottom:12px;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:0.02em}
-.foot-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:40px}
-@media(max-width:720px){.foot-grid{grid-template-columns:1fr;gap:30px}}
-footer a{color:#fff;text-decoration:none;transition:color 0.2s ease}
-footer a:hover{color:var(--gold)}
-.states{line-height:1.9;font-size:12px;color:#9AA6BC}
-.legal{border-top:1px solid #26324F;margin-top:32px;padding-top:22px;font-size:12px;line-height:1.7;color:#7C889F}
+/* FAQ */
+.faq{max-width:780px;margin:0 auto;text-align:left}
+.faq h3.group{font-size:22px;margin:38px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+.faq h3.group:first-child{margin-top:0}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;font-weight:600;color:var(--navy);padding:16px 30px 16px 0;position:relative;list-style:none;font-size:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:24px;color:var(--gold);font-weight:400}
+details[open] summary::after{content:"–"}
+details p,details ul{padding:0 0 16px;color:var(--muted);font-size:15px}
+details ul{margin-left:20px}
+details li{margin-bottom:6px}
+
+/* Form */
+.form-card{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:44px;box-shadow:0 16px 40px rgba(20,33,61,.07);text-align:left}
+fieldset{border:none;margin-bottom:28px}
+legend{font-family:'Playfair Display',serif;font-size:19px;color:var(--navy);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:620px){.row{grid-template-columns:1fr}.form-card{padding:28px 20px}}
+.field{margin-bottom:16px}
+label.l{display:block;font-size:13.5px;font-weight:500;margin-bottom:6px}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{width:100%;padding:12px 14px;border:1px solid #D5D9E0;border-radius:6px;font:inherit;font-size:15px;color:var(--ink);background:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(20,33,61,.1)}
+textarea{min-height:100px;resize:vertical}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:620px){.options{grid-template-columns:1fr}}
+.opt{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #D5D9E0;border-radius:6px;font-size:14.5px;cursor:pointer}
+.opt:hover{border-color:var(--navy)}
+.opt input{accent-color:var(--navy);width:17px;height:17px;flex-shrink:0}
+.consent{display:flex;gap:10px;font-size:12.5px;color:var(--muted);align-items:flex-start;margin:6px 0 22px}
+.consent input{margin-top:4px;accent-color:var(--navy)}
+.secure{background:var(--gold-soft);border-radius:6px;padding:12px 14px;font-size:13px;color:#6B5733;margin-bottom:26px}
+.form-card .btn{width:100%;font-size:16px;padding:15px}
+#status{margin-top:16px;text-align:center;font-size:14px}
+.hours{max-width:720px;margin:28px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:14px;color:var(--muted);text-align:left}
+.hours div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.hours b{color:var(--navy);display:block;margin-bottom:4px}
+@media(max-width:620px){.hours{grid-template-columns:1fr}}
+
+/* Privacy page */
+.doc{max-width:780px;margin:0 auto;padding:50px 22px 70px}
+.doc h1{font-size:36px;margin-bottom:6px}
+.doc .date{color:var(--muted);font-size:14px;margin-bottom:30px}
+.doc h2{font-size:22px;margin:32px 0 10px}
+.doc p,.doc li{font-size:15.5px;margin-bottom:12px}
+.doc ul{margin-left:22px}
+
+/* Footer */
+footer{background:#0E1730;color:#9AA6BC;padding:56px 0 30px;font-size:13px}
+footer h3{color:#fff;font-size:17px;margin-bottom:10px;font-family:'Inter',sans-serif;font-weight:600}
+.foot-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:40px}
+@media(max-width:720px){.foot-grid{grid-template-columns:1fr}}
+footer a{color:#fff;text-decoration:none}
+.states{line-height:1.9;font-size:11.5px}
+.legal{border-top:1px solid #26324F;margin-top:32px;padding-top:22px;font-size:11.5px;line-height:1.7;color:#7C889F}
+
 </style>
 </head>
 <body>
@@ -102,15 +178,15 @@ footer a:hover{color:var(--gold)}
       <a class="link active" href="faq.html">FAQ</a>
       <a class="link" href="contact.html">Contact</a>
     </div>
-    <a class="btn small" href="contact.html">Request Quote & Consultation</a>
+    <a class="btn small" href="contact.html">Request Quote &amp; Consultation</a>
   </div>
 </header>
 
 <div class="page-head">
   <div class="container">
-    <div class="eyebrow">Frequently Asked Questions</div>
-    <h1>Questions people often ask</h1>
-    <p>Straight answers, no fine print games.</p>
+    <div class="eyebrow">FAQ</div>
+    <h1>Straight answers to your questions</h1>
+    <p>Including the "do I really need this?" ones. No pressure, no fine print games.</p>
   </div>
 </div>
 
@@ -118,94 +194,148 @@ footer a:hover{color:var(--gold)}
   <div class="container">
     <div class="faq">
 
-      <h3 class="group">Cost &amp; Process</h3>
+      <h3 class="group">"Do I even need this?"</h3>
 
       <details>
-        <summary>Does it cost anything to talk with you or review my policy?</summary>
-        <p>No. All strategy consultations and portfolio reviews are completely complimentary, with absolutely no obligation or pressure to purchase coverage.</p>
+        <summary>I'm healthy and doing well financially. Why would I need life insurance?</summary>
+        <p>Good question, and the honest answer is that some people don't. Life insurance isn't about whether you can afford a loss. It's about what happens to the people and plans that depend on your income if it suddenly stopped. If a partner, children, a mortgage, or business obligations rely on you, it's worth a look. If nobody depends on your income and your assets already cover everything, you may not need it, and I'll tell you that.</p>
       </details>
 
       <details>
-        <summary>How are you compensated as an independent consultant?</summary>
-        <p>If you choose to implement a new asset protection structure, the selected insurance carrier compensates me directly for bringing them your business. This commission does not alter your premium rate or diminish your policy's value in any way. Premium pricing is locked firmly by state regulators based on age, health history, and carrier underwriting guidelines. I do not set, markup, or manipulate your rate, and my professional analysis remains 100% free to you.</p>
+        <summary>I already have coverage through my job. Isn't that enough?</summary>
+        <p>It might be a good start, but it's worth checking. Employer coverage is often one to two times your salary, which can be far less than a family needs. It usually ends when you leave the company, and it may not follow you if you change jobs or your health changes. A short review shows you exactly what you have and what gaps, if any, exist.</p>
+      </details>
+
+      <details>
+        <summary>I'd rather invest my money myself. Why pay for insurance?</summary>
+        <p>That's a reasonable view, and many of my clients feel the same way. Term life insurance is designed to be a relatively low-cost way to protect your family while you build wealth. It isn't an either-or decision. Permanent policies, like whole life or IUL, are a different tool with their own costs and tradeoffs, and they are not a replacement for investing. I'll explain both sides, so you can decide what fits your plan.</p>
+      </details>
+
+      <details>
+        <summary>I'm in my 30s or 40s. Isn't it too early to think about this?</summary>
+        <p>Pricing is based largely on your age and health, so coverage generally costs less the younger and healthier you are. Health can change without warning, and once it does, options can narrow or get more expensive. For many people, the main reason to look now is the chance to lock in coverage while they qualify. Whether it makes sense for you depends on your situation.</p>
+      </details>
+
+      <details>
+        <summary>I don't have kids. Does life insurance still make sense?</summary>
+        <p>Sometimes yes, sometimes no. It can matter if you have a partner who would be affected, a mortgage or co-signed debts, aging parents who depend on you, or you want final expenses covered so no one else has to pay them. If none of that applies, you might not need it right now, and I won't try to sell you something you don't need.</p>
+      </details>
+
+      <details>
+        <summary>Will you pressure me to buy?</summary>
+        <p>No. I only want clients who see the value and want to be there. You can ask questions, compare options, and walk away at any time. A policy you feel pushed into is one that tends to get canceled, and that doesn't help you or me.</p>
+      </details>
+
+      <h3 class="group">Cost &amp; process</h3>
+
+      <details>
+        <summary>Does it cost anything to talk with you or review my policy?</summary>
+        <p>No. Consultations and policy reviews are free, with no obligation to buy anything.</p>
+      </details>
+
+      <details>
+        <summary>How are you paid?</summary>
+        <p>If you decide to buy a policy, the insurance company pays me a commission for bringing them your business. It does not add to your premium or reduce the value of your policy. Rates are set by the insurance carriers based on your age, health, and underwriting, not by me. You pay me nothing for the consultation or review.</p>
       </details>
 
       <details>
         <summary>What if I change my mind after a policy is issued?</summary>
-        <p>Every newly issued policy comes with a mandatory <strong>30-day free-look period</strong>. This gives you a full month to thoroughly review the physical contract. If you decide the coverage no longer fits your specific financial objectives, you can cancel the policy within those 30 days for a full, 100% refund of any premiums paid, with no penalties or questions asked.</p>
+        <p>Most policies include a "free-look" period after you receive the contract, commonly between 10 and 30 days depending on your state and the policy. If you cancel within that window, you generally get back the premiums you paid. I'll tell you the exact free-look period that applies to your policy before you decide.</p>
       </details>
 
       <details>
-        <summary>How fast is the decision process, and do I need a medical exam or blood work?</summary>
-        <p>Leveraging modern digital algorithmic underwriting platforms, many of our frameworks offer <strong>instant decisions</strong>, allowing you to secure an approval right over the phone. In the vast majority of standard cases, there is no blood work or medical exam required. Exact underwriting parameters depend entirely on the specific insurance carrier, your age, your current health profile, and the total coverage threshold requested.</p>
+        <summary>How fast is the decision, and do I need a medical exam or blood work?</summary>
+        <p>Many policies offer instant or same-day decisions, and you can often get an answer over the phone. For many standard cases there is no blood work or medical exam. Exact requirements depend on the carrier, your age, your health, and the amount of coverage you request.</p>
       </details>
 
       <details>
         <summary>When can I reach you, and how quickly do you respond?</summary>
-        <p>My hours of operation are Monday through Friday from 9:00 AM to 9:00 PM, and Saturday from 9:00 AM to 4:30 PM Eastern Time. Afternoons and evenings generally offer the highest availability. Simply submit your information through the private client portal, and I will reach out exactly during your preferred scheduling window.</p>
+        <p>Monday to Friday, 9 AM to 9 PM, and Saturday, 9 AM to 4:30 PM Eastern. Afternoons and evenings are usually the easiest. Submit the form and I'll reach out at your preferred time.</p>
       </details>
 
       <details>
         <summary>Which states are you licensed in?</summary>
-        <p>I maintain active regulatory credentials and life insurance producer licenses across 30 states (fully detailed at the bottom of every page). Legally, I can only conduct strategy reviews and discuss specific insurance products with individuals residing within these 30 approved jurisdictions.</p>
+        <p>I hold a life insurance license in 30 states (listed at the bottom of every page). I can only discuss and sell insurance in states where I'm licensed.</p>
       </details>
 
       <h3 class="group">Coverage</h3>
 
-      <details><summary>What's the difference between term, whole life, and IUL?</summary>
+      <details>
+        <summary>What's the difference between term, whole life, and IUL?</summary>
         <ul>
-          <li><b>Term:</b> coverage for a set period (like 20 years) at the lowest cost. No cash value.</li>
+          <li><b>Term:</b> coverage for a set period (like 20 years), usually at the lowest cost. No cash value.</li>
           <li><b>Whole life:</b> lifelong coverage with fixed premiums and guaranteed cash value growth.</li>
           <li><b>IUL (indexed universal life):</b> permanent coverage with flexible premiums and cash value tied to a market index. Cash value is not guaranteed, and charges apply.</li>
-        </ul></details>
+        </ul>
+      </details>
 
-      <details><summary>How much coverage do I need?</summary>
-        <p>It depends on your income, debts, mortgage, family, and goals. A common starting point is a multiple of your annual income, plus debts and future costs like college. We'll work through it together so you don't overbuy or underbuy.</p></details>
+      <details>
+        <summary>How much coverage do I need?</summary>
+        <p>It depends on your income, debts, mortgage, family, and goals. A common starting point is a multiple of your annual income, plus debts and future costs like college. We'll work through it together so you don't overbuy or underbuy.</p>
+      </details>
 
-      <details><summary>What is mortgage protection?</summary>
-        <p>It's life insurance set up with your mortgage in mind. If you pass away, the benefit goes to the beneficiary you choose, who can use it toward the mortgage or other needs. It's not required by your lender, and the benefit is paid to your family, not the bank.</p></details>
+      <details>
+        <summary>What is mortgage protection?</summary>
+        <p>It's life insurance set up with your mortgage in mind. If you pass away, the benefit goes to the beneficiary you choose, who can use it toward the mortgage or other needs. It's not required by your lender, and the benefit is paid to your family, not the bank.</p>
+      </details>
 
-      <details><summary>Is an IUL a good investment?</summary>
-        <p>An IUL is life insurance first, not a stock market investment. It can be a useful tool for some people who want permanent coverage and are able to fund it consistently, but there are fees, caps, and no guaranteed returns. If it isn't a good fit, I'll say so.</p></details>
+      <details>
+        <summary>Is an IUL a good investment?</summary>
+        <p>An IUL is life insurance first, not a stock market investment. It can be a useful tool for some people who want permanent coverage and are able to fund it consistently, but there are fees, caps, and no guaranteed returns. If it isn't a good fit, I'll say so.</p>
+      </details>
 
-      <details><summary>What if I have health problems?</summary>
+      <details>
+        <summary>What if I have health problems?</summary>
         <p>You still have options. Different carriers accept different health conditions, and I work with many of them, so a "no" from one company isn't the end of the road. Depending on your health, a policy may come with one or more tradeoffs:</p>
         <ul>
           <li><b>Lower coverage amounts</b> than someone in excellent health could get.</li>
           <li><b>Higher premiums</b> to reflect the added risk.</li>
           <li><b>A waiting period (graded benefit),</b> where the full benefit isn't paid for the first couple of years, though premiums paid are typically returned if death occurs in that window.</li>
         </ul>
-        <p>I'll explain exactly how each option works, what it costs, and what it covers before you decide.</p></details>
+        <p>I'll explain exactly how each option works, what it costs, and what it covers before you decide.</p>
+      </details>
 
-      <details><summary>I'm on a fixed income. Will you recommend something I can afford?</summary>
-        <p>Yes. A policy you can't keep paying for doesn't protect anyone. I'd rather recommend a smaller amount you can maintain than a large one that lapses.</p></details>
+      <details>
+        <summary>I'm on a fixed income. Will you recommend something I can afford?</summary>
+        <p>Yes. A policy you can't keep paying for doesn't protect anyone. I'd rather recommend a smaller amount you can maintain than a large one that lapses.</p>
+      </details>
 
-      <details><summary>Which companies do you work with?</summary>
-        <p>I'm contracted with a large number of top-rated insurance companies, so I can look at national pricing and options side by side instead of offering you just one. Not every product is available in every state or for every health situation.</p></details>
+      <details>
+        <summary>Which companies do you work with?</summary>
+        <p>I'm contracted with a large number of top-rated insurance companies, so I can look at national pricing and options side by side instead of offering you just one. Not every product is available in every state or for every health situation.</p>
+      </details>
 
       <h3 class="group">Applying &amp; reviewing a policy</h3>
 
-      <details><summary>What information will I need if I decide to apply?</summary>
-        <p>Requesting a consultation only takes basic contact details. If you decide to apply, the carrier will need a few things to process the application, which we complete together by phone or through the carrier's secure application, not on this website:
+      <details>
+        <summary>What information will I need if I decide to apply?</summary>
+        <p>Requesting a consultation only takes basic contact details. If you decide to apply, the carrier will need a few things to process the application, which we complete together by phone or through the carrier's secure application, not on this website:</p>
         <ul>
           <li>Your Social Security number, to correctly match you in the carrier's system</li>
           <li>Your consent to a HIPAA authorization, so the carrier can verify health information</li>
           <li>Your bank routing and account number. Paying by bank draft from a checking or savings account usually opens up more carriers and better rates. Credit cards, debit cards, and Direct Express cards are accepted by fewer carriers, which can limit your options.</li>
-        </ul></details>
+        </ul>
+      </details>
 
-      <details><summary>What does a policy review look like?</summary>
-        <p>We'll look at your coverage amount, how long it lasts, what it costs, and any limits (like accidental-death-only or a graded benefit period). It helps to have a statement or policy details handy. Please do not send your Social Security number or bank information through this website.</p></details>
+      <details>
+        <summary>What does a policy review look like?</summary>
+        <p>We'll look at your coverage amount, how long it lasts, what it costs, and any limits (like accidental-death-only or a graded benefit period). It helps to have a statement or policy details handy. Please do not send your Social Security number or bank information through this website.</p>
+      </details>
 
-      <details><summary>Will you tell me to cancel my current policy?</summary>
-        <p>Only if it's clearly in your best interest, and often it isn't. Before anything changes, we compare the old and new policy side by side. A few important rules:
+      <details>
+        <summary>Will you tell me to cancel my current policy?</summary>
+        <p>Only if it's clearly in your best interest, and often it isn't. Before anything changes, we compare the old and new policy side by side. A few important rules:</p>
         <ul>
           <li>Never cancel an existing policy until the new one is approved and in force.</li>
           <li>Newer policies can start new waiting periods and may cost more as you age or if your health has changed.</li>
           <li>If keeping what you have is the better choice, I'll tell you that.</li>
-        </ul></details>
+        </ul>
+      </details>
 
-      <details><summary>Is my information safe?</summary>
-        <p>I only ask for what's needed to prepare for our conversation and never ask for your Social Security number or banking details through this site. See my Privacy Policy for details.</p></details>
+      <details>
+        <summary>Is my information safe?</summary>
+        <p>I only ask for what's needed to prepare for our conversation and never ask for your Social Security number or banking details through this site. See my <a href="privacy.html">Privacy Policy</a> for details.</p>
+      </details>
 
     </div>
   </div>
@@ -215,7 +345,7 @@ footer a:hover{color:var(--gold)}
   <div class="container">
     <h2>Still have a question?</h2>
     <p>Ask me directly. It's free and there's no obligation.</p>
-    <a class="btn" href="contact.html">Request Quote & Consultation</a>
+    <a class="btn" href="contact.html">Request a Free Consultation</a>
   </div>
 </section>
 
@@ -224,8 +354,8 @@ footer a:hover{color:var(--gold)}
     <div class="foot-grid">
       <div>
         <h3>Christopher Chau</h3>
-        <p>Independent Insurance Consultant<br>
-        Based in Boston, MA &amp; Miami, FL<br>
+        <p>Licensed Life Insurance Agent &amp; Consultant<br>
+        Boston, MA &amp; Miami, FL<br>
         <a href="tel:6179593437">617-959-3437</a><br>
         <a href="mailto:cchau.insurance@gmail.com">cchau.insurance@gmail.com</a><br><br>
         <a href="privacy.html" style="text-decoration:underline">Privacy Policy</a></p>
@@ -236,13 +366,8 @@ footer a:hover{color:var(--gold)}
       </div>
     </div>
     <div class="legal">
-      Christopher Chau is a licensed life insurance broker. He may only discuss or sell products in states where he holds active regulatory licensing credentials. This website is an independent marketing portal and is not affiliated with, endorsed by, or connected to any government agency, Medicare, or Social Security. 
-      <br><br>
-      All requested quotes, rate calculations, and consultation models are non-binding premium estimates utilizing available state rate grids; final policy approvals, pricing tiers, features, and product availability are determined solely by individual insurance carrier underwriting guidelines. Cash value permanent life insurance policies, including Indexed Universal Life (IUL) architectures, involve internal cost structures, fees, and distinct charges. These products are fundamentally insurance vehicles designed for death benefit protection and asset continuity—they are not an investment, and any projected cash growth or non-guaranteed values are subject to market index performance fluctuations and are never guaranteed. 
-      <br><br>
-      Replacing or surrendering an existing outside policy may carry serious hidden tax penalties, costs, or long-term coverage disadvantages. Clients are explicitly advised to never cancel or drop any active policy until a new replacement contract has been officially approved, issued, and verified in force by the receiving carrier. All information, definitions, and FAQ responses on this site are designed strictly for general education and asset protection awareness; nothing contained herein constitutes professional tax, legal, or investment advice. Any potential premium savings or increases to your current coverage limits uncovered during a policy audit are conditional and are not guaranteed.
-      <br><br>
-      © <span id="yr"></span> Christopher Chau. All rights reserved.
+      Christopher Chau is a licensed life insurance agent. He may only discuss or sell products in states where he holds an active license. This website is not affiliated with any government agency, Medicare, or Social Security. Quotes and estimates are non-binding; final approval, pricing, and product availability are determined by each insurance carrier's underwriting and vary by state. Cash value policies, including IUL, are insurance products with fees and charges, are not investments, and projected values are not guaranteed. Replacing or surrendering an existing policy may have tax consequences, costs, or coverage disadvantages. Never cancel a policy until a replacement is approved and in force. Information on this site is general education and is not tax, legal, or investment advice. Any savings or added coverage from a policy review are not guaranteed.
+      <br><br>© <span id="yr"></span> Christopher Chau. All rights reserved.
     </div>
   </div>
 </footer>
