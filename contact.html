@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Christopher Chau, Independent Insurance Consultant</title>
 <meta name="description" content="Request a free, no-pressure life insurance consultation or policy review.">
-<link rel="preconnect" href="https://googleapis.com">
-<link rel="preconnect" href="https://gstatic.com" crossorigin>
-<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#14213D; --navy-2:#1F2F52; --gold:#B08D57; --gold-soft:#F3EBDD;
@@ -60,30 +60,30 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backd
 .page-head p{color:var(--muted);max-width:620px;margin:0 auto}
 @media(max-width:600px){.page-head h1{font-size:30px}}
 
-/* Form Architecture */
-.form-card{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:44px;box-shadow:0 16px 40px rgba(20,33,61,.07);text-align:left}
-fieldset{border:none;margin-bottom:28px}
-legend{font-family:'Playfair Display',serif;font-size:19px;color:var(--navy);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line);width:100%}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:620px){.row{grid-template-columns:1fr}.form-card{padding:28px 20px}}
-.field{margin-bottom:16px}
-label.l{display:block;font-size:13.5px;font-weight:500;margin-bottom:6px}
-input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{width:100%;padding:12px 14px;border:1px solid #D5D9E0;border-radius:6px;font:inherit;font-size:15px;color:var(--ink);background:#fff}
+/* Form */
+.form-card{max-width:740px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:48px;box-shadow:0 16px 40px rgba(20,33,61,.07);text-align:left}
+fieldset{border:none;margin-bottom:32px}
+legend{font-family:'Playfair Display',serif;font-size:20px;color:var(--navy);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--line);width:100%;font-weight:600}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:620px){.row{grid-template-columns:1fr}.form-card{padding:32px 20px}}
+.field{margin-bottom:20px}
+label.l{display:block;font-size:14px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{width:100%;padding:13px 16px;border:1px solid #D5D9E0;border-radius:6px;font:inherit;font-size:15px;color:var(--ink);background:#fff}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(20,33,61,.1)}
-textarea{min-height:100px;resize:vertical}
-.options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+textarea{min-height:110px;resize:vertical}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:620px){.options{grid-template-columns:1fr}}
-.opt{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #D5D9E0;border-radius:6px;font-size:14.5px;cursor:pointer}
-.opt:hover{border-color:var(--navy)}
-.opt input{accent-color:var(--navy);width:17px;height:17px;flex-shrink:0}
-.consent{display:flex;gap:10px;font-size:12.5px;color:var(--muted);align-items:flex-start;margin:6px 0 22px}
-.consent input{margin-top:4px;accent-color:var(--navy)}
-.secure{background:var(--gold-soft);border-radius:6px;padding:12px 14px;font-size:13px;color:#6B5733;margin-bottom:26px}
-.form-card .btn{width:100%;font-size:16px;padding:15px}
-#status{margin-top:16px;text-align:center;font-size:14px}
-.hours{max-width:720px;margin:28px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:14px;color:var(--muted);text-align:left}
-.hours div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 18px}
-.hours b{color:var(--navy);display:block;margin-bottom:4px}
+.opt{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid #D5D9E0;border-radius:6px;font-size:14.5px;cursor:pointer;background:#white;user-select:none}
+.opt:hover{border-color:var(--navy);background:var(--bg)}
+.opt input{accent-color:var(--navy);width:18px;height:18px;flex-shrink:0}
+.consent{display:flex;gap:12px;font-size:13px;color:var(--muted);align-items:flex-start;margin:12px 0 24px;line-height:1.5}
+.consent input{margin-top:3px;accent-color:var(--navy);width:17px;height:17px;flex-shrink:0}
+.secure{background:var(--gold-soft);border-radius:6px;padding:14px 16px;font-size:13.5px;color:#6B5733;margin-bottom:28px;line-height:1.5;display:flex;align-items:center;gap:8px;font-weight:500}
+.form-card .btn{width:100%;font-size:16px;padding:16px;font-weight:600}
+#status{margin-top:18px;text-align:center;font-size:14.5px}
+.hours{max-width:740px;margin:32px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:14px;color:var(--muted);text-align:left}
+.hours div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px 20px}
+.hours b{color:var(--navy);display:block;margin-bottom:6px;font-size:15px}
 @media(max-width:620px){.hours{grid-template-columns:1fr}}
 
 /* Institutional Footer Layout */
@@ -109,7 +109,7 @@ footer a:hover{color:var(--gold)}
       <a class="link" href="faq.html">FAQ</a>
       <a class="link active" href="contact.html">Contact</a>
     </div>
-    <a class="btn small" href="contact.html">Request Quote & Consultation</a>
+    <a class="btn small" href="contact.html">Free Quote & Consultation</a>
   </div>
 </header>
 
@@ -120,35 +120,16 @@ footer a:hover{color:var(--gold)}
     <p>A few quick details, and I'll reach out personally at the time you choose.</p>
   </div>
 </div>
-  <div>
-<fieldset>
-  <legend>1. About you</legend>
-  <div class="row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 0;">
-    <div class="field" style="margin-bottom: 16px;">
-      <label class="l" for="first_name">First name *</label>
-      <input type="text" id="first_name" name="First Name" required autocomplete="given-name" style="width: 100%;">
-    </div>
-    <div class="field" style="margin-bottom: 16px;">
-      <label class="l" for="last_name">Last name *</label>
-      <input type="text" id="last_name" name="Last Name" required autocomplete="family-name" style="width: 100%;">
-    </div>
-  </div>
-  <div class="row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 0;">
-    <div class="field" style="margin-bottom: 16px;">
-      <label class="l" for="tel">Phone *</label>
-      <input type="tel" id="tel" name="Phone" required autocomplete="tel" style="width: 100%;">
-    </div>
-    <div class="field" style="margin-bottom: 16px;">
-      <label class="l" for="email">Email *</label>
-      <input type="email" id="email" name="Email" required autocomplete="email" style="width: 100%;">
-    </div>
-</fieldset>
-  </div>
 
+<section>
+  <div class="container">
+    <form class="form-card" id="intakeForm" action="https://formsubmit.co/ajax/cchau.insurance@gmail.com" method="POST">
+      <div class="secure"> Please don't include Social Security numbers, bank information, or medical details here. We'll cover anything sensitive securely by phone.</div>
 
-      
-      <!-- TCPA COMPLIANCE AUDIT FIELD -->
-      <input type="hidden" id="tcpa_timestamp" name="TCPA Written Consent Timestamp" value="">
+      <input type="hidden" name="_subject" value="New consultation request from your website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
       <fieldset>
         <legend>1. About you</legend>
@@ -171,7 +152,6 @@ footer a:hover{color:var(--gold)}
           </div>
           <div class="field">
             <label class="l" for="dob">Date of birth * <span style="color:var(--muted);font-weight:400">(for accurate quotes)</span></label>
-
             <input type="date" id="dob" name="Date of Birth" required autocomplete="bday">
           </div>
         </div>
@@ -242,7 +222,7 @@ footer a:hover{color:var(--gold)}
       <div>
         <h3>Christopher Chau</h3>
         <p>Independent Insurance Consultant<br>
-        Based in Boston, MA &amp; Miami, FL<br>
+        Boston, MA &amp; Miami, FL<br>
         <a href="tel:6179593437">617-959-3437</a><br>
         <a href="mailto:cchau.insurance@gmail.com">cchau.insurance@gmail.com</a><br><br>
         <a href="privacy.html" style="text-decoration:underline">Privacy Policy</a></p>
