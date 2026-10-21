@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | Christopher Chau, Independent Insurance Consultant</title>
 <meta name="description" content="Why Christopher Chau does this work, and how he helps families get clear, pressure-free life insurance guidance.">
-<link rel="preconnect" href="https://googleapis.com">
-<link rel="preconnect" href="https://gstatic.com" crossorigin>
-<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#14213D; --navy-2:#1F2F52; --gold:#B08D57; --gold-soft:#F3EBDD;
@@ -62,23 +62,24 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backd
 
 /* Two Column Layout */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-@media(max-width:820px){.two{grid-template-columns:1fr;gap:30px}}
+@media(max-width:820px){.two{grid-template-columns:1fr;gap:40px}}
 
 /* About Layout Modifiers */
-.about p{margin-bottom:16px;font-size:16px}
-.pledge{background:var(--gold-soft);border-left:4px solid var(--gold);padding:20px 24px;border-radius:0 8px 8px 0}
-.pledge h3{font-size:20px;margin-bottom:10px}
+.about p{margin-bottom:18px;font-size:16px;line-height:1.7}
+.pledge{background:var(--gold-soft);border-left:4px solid var(--gold);padding:28px;border-radius:0 12px 12px 0;box-shadow:0 4px 20px rgba(176,141,87,0.05)}
+.pledge h3{font-size:22px;margin-bottom:16px;font-family:'Playfair Display',serif;color:var(--navy)}
 .pledge ul{list-style:none}
-.pledge li{padding:6px 0 6px 22px;position:relative;font-size:14.5px}
-.pledge li::before{content:"•";position:absolute;left:4px;color:var(--gold);font-weight:700}
-.about-photo{max-width:300px;margin:0 0 28px}
-.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;background:var(--gold-soft);box-shadow:0 12px 30px rgba(20,33,61,.12)}
-@media(max-width:820px){.about-photo{margin:0 auto 24px}}
+.pledge li{padding:10px 0 10px 28px;position:relative;font-size:15px;line-height:1.6;color:var(--ink);border-bottom:1px solid rgba(20,33,61,0.05)}
+.pledge li:last-child{border-bottom:none}
+.pledge li::before{content:"•";position:absolute;left:4px;color:var(--gold);font-weight:700;font-size:20px;top:6px}
+.about-photo{max-width:100%;margin:0 0 28px;position:relative}
+.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;display:block;background:var(--gold-soft);box-shadow:0 18px 40px rgba(20,33,61,0.12)}
+@media(max-width:820px){.about-photo{max-width:320px;margin:0 auto 28px}}
 
 /* CTA Strip */
-.cta{background:var(--gold-soft);padding:54px 0;text-align:center}
-.cta h2{font-size:28px;margin-bottom:10px}
-.cta p{color:var(--muted);margin-bottom:22px}
+.cta{background:var(--gold-soft);padding:64px 0;text-align:center}
+.cta h2{font-size:32px;margin-bottom:12px;font-family:'Playfair Display',serif;color:var(--navy)}
+.cta p{color:var(--ink);font-size:16px;margin-bottom:26px}
 
 /* Institutional Footer Layout */
 footer{background:#0E1730;color:#9AA6BC;padding:56px 0 30px;font-size:13px;text-align:left}
@@ -123,7 +124,7 @@ footer a:hover{color:var(--gold)}
       </div>
       <p>I got into this industry because I am tired of seeing families forced to turn to crowdfunding after losing a loved one. I have seen what happens when there isn't enough money for a dignified funeral, when a family home is suddenly on the line, and when people have no idea what the next step is in the middle of the hardest time of their lives.</p>
       <p>A single unfortunate event can instantly wipe out years of hard-earned savings and change everything. Too many people don't take asset protection seriously until it is too late, and I am here to help change that.</p>
-      <p>Since becoming licensed in <strong>2024</strong>, I have personally guided <strong>over 400 families</strong> and conducted thousands of critical conversations about coverage. Today, I maintain active regulatory licenses across <strong>30 states</strong>, serving clients from Boston to Miami and everywhere in between.</p>
+      <p>Since becoming licensed in <strong>2024</strong>, I have personally guided **over 400 families** and conducted thousands of critical conversations about coverage. Today, I maintain active regulatory licenses across **30 states**, serving clients from Boston to Miami and everywhere in between.</p>
       <p>My ultimate goal is to take a complicated financial situation and make it completely seamless, acting as a true advocate who helps you leverage the best structural options actually available to you.</p>
     </div>
     <div class="pledge">
@@ -154,7 +155,7 @@ footer a:hover{color:var(--gold)}
       <div>
         <h3>Christopher Chau</h3>
         <p>Independent Insurance Consultant<br>
-        Boston, MA &amp; Miami, FL<br>
+        Based in Boston, MA &amp; Miami, FL<br>
         <a href="tel:6179593437">617-959-3437</a><br>
         <a href="mailto:cchau.insurance@gmail.com">cchau.insurance@gmail.com</a><br><br>
         <a href="privacy.html" style="text-decoration:underline">Privacy Policy</a></p>
@@ -165,11 +166,18 @@ footer a:hover{color:var(--gold)}
       </div>
     </div>
     <div class="legal">
-      Christopher Chau is a licensed life insurance broker. He may only discuss or sell products in states where he is licensed. This website is not affiliated with any government agency, Medicare, or Social Security. Product availability, features, and pricing vary by state, carrier, and individual underwriting. Cash value policies, including IUL, involve fees and charges and are not an investment; projected values are not guaranteed. Replacing an existing policy may have costs or disadvantages. Never cancel a policy until a replacement is approved and in force. Information on this site is general education and is not tax, legal, or investment advice. Any savings or added coverage from a policy review are not guaranteed.
-      <br><br>© <span id="yr"></span> Christopher Chau. All rights reserved.
+      Christopher Chau is a licensed life insurance broker. He may only discuss or sell products in states where he holds active regulatory licensing credentials. This website is an independent marketing portal and is not affiliated with, endorsed by, or connected to any government agency, Medicare, or Social Security. 
+      <br><br>
+      All requested quotes, rate calculations, and consultation models are non-binding premium estimates utilizing available state rate grids; final policy approvals, pricing tiers, features, and product availability are determined solely by individual insurance carrier underwriting guidelines. Cash value permanent life insurance policies, including Indexed Universal Life (IUL) architectures, involve internal cost structures, fees, and distinct charges. These products are fundamentally insurance vehicles designed for death benefit protection and asset continuity—they are not an investment, and any projected cash growth or non-guaranteed values are subject to market index performance fluctuations and are never guaranteed. 
+      <br><br>
+      Replacing or surrendering an existing outside policy may carry serious hidden tax penalties, costs, or long-term coverage disadvantages. Clients are explicitly advised to never cancel or drop any active policy until a new replacement contract has been officially approved, issued, and verified in force by the receiving carrier. All information, definitions, and FAQ responses on this site are designed strictly for general education and asset protection awareness; nothing contained herein constitutes professional tax, legal, or investment advice. Any potential premium savings or increases to your current coverage limits uncovered during a policy audit are conditional and are not guaranteed.
+      <br><br>
+      © <span id="yr"></span> Christopher Chau. All rights reserved.
     </div>
   </div>
 </footer>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
